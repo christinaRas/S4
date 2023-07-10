@@ -13,7 +13,7 @@
 
   <main>
   <div class="containerPaiement">
-    <form>
+  <form action="<?php echo base_url('../paiement/processPayment'); ?>" method="post">
       <div class="form-group">
         <label for="code">Code de Paiement</label>
         <select id="code" name="code">
