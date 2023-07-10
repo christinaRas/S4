@@ -16,14 +16,19 @@ class Landing extends MY_Controller
     {
         $this->load->library('session');
         $id_user = $this->session->userdata('id_user');
-        $genre=$this->input->post("genre");
-		$taille = $this->input->post("taille");
+        $genre = $this->input->post("genre");
+        $taille = $this->input->post("taille");
         $poids = $this->input->post("poids");
-        $choix=$this->input->post("choix");
-
+        $choix = $this->input->post("choix");
+    
         $this->load->model('Model_diet');
-        $this->Model_diet->save($id_user,$genre,$taille,$poids,$choix);
-        $this->vue('login');
-	
-    }
+        $this->Model_diet->save($id_user, $genre, $taille, $poids, $choix);
+    
+        if ($choix == 1) {
+            header("Location: " . $base_url . '../Augmentation/plat');
+            exit();
+        } elseif ($choix == 2) {
+           echo 'mbola tsisy';
+        }
+    }    
 }

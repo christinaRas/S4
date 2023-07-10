@@ -54,11 +54,27 @@ create table ChoixObjectif(
     FOREIGN key (id_choix) references choix(id_choix)
 );
 
-create table regimeMampitombo(
-    idMampitombo int primary key auto_increment not null,
-    titre varchar (100),
-    imageMampitombo varchar(100)
-)engine=innodb;
+create table regimeMampitomboplat(
+    idMampitomboplat int primary key auto_increment,
+    nomMampitomboplat varchar (100),
+    photoMampitomboplat varchar(100)
+);
+insert into regimeMampitomboplat values(null,'Poulet et kabaro','public/images/mampitombo/1.jpg');
+insert into regimeMampitomboplat values(null,'Henakisoa sosy','public/images/mampitombo/2.jpg');
+insert into regimeMampitomboplat values(null,'Noulette sauce','public/images/mampitombo/3.jpg');
+insert into regimeMampitomboplat values(null,'Saucice aux oignons','public/images/mampitombo/4.jpg');
+insert into regimeMampitomboplat values(null,'Cassoulet','public/images/mampitombo/5.jpg');
+insert into regimeMampitomboplat values(null,'Hen omby sy anana','public/images/mampitombo/6.jpg');
+insert into regimeMampitomboplat values(null,'Cottelet sauce','public/images/mampitombo/7.jpg');
+
+
+create table regimeMampitombosport(
+    idMampitombosport int primary key auto_increment not null,
+    nomMampitombosport varchar (100),
+    dure_a int,
+    photoMampitombosport varchar(100)
+);
+
 
 insert into regimeMampitombo values(1,'','public/images/mampitombo/1.jpg');
 insert into regimeMampitombo values(2,'','public/images/mampitombo/2.jpg');
@@ -72,11 +88,19 @@ insert into regimeMampitombo values(9,'','public/images/mampitombo/32.jpg');
 insert into regimeMampitombo values(10'','public/images/mampitombo/33.jpg');
 
 
-create table regimeMampihena(
-    idMampihena int primary key auto_increment not null,
-    titre varchar (100),
-    imageMampihena varchar(100)
-)engine=innodb;
+create table regimeMampihenaplat(
+    idMampihenaplat int primary key auto_increment not null,
+    nomMampihenaplat varchar (100),
+    photoMampihenaplat varchar(100)
+);
+
+create table regimeMampihenasport(
+    idMampihenasport int primary key auto_increment not null,
+    nomMampihenasport varchar (100),
+    dure_d int,
+    photoMampihenasport varchar(100)
+);
+
 
 insert into regimeMampitombo values(1,'','public/images/mampihena/8.jpg');
 insert into regimeMampitombo values(2,'','public/images/mampihena/9.jpg');
@@ -89,20 +113,20 @@ insert into regimeMampitombo values(8,'','public/images/mampihena/15.jpg');
 insert into regimeMampitombo values(9,'','public/images/mampihena/16.jpg');
 insert into regimeMampitombo values(10'','public/images/mampihena/17.jpg');
 
-create table ActiviteSport(
-    idAS int primary key auto_increment not null,
-    typeSport varchar(100)
-)engine=innodb;
+-- create table ActiviteSport(
+--     idAS int primary key auto_increment not null,
+--     typeSport varchar(100)
+-- )engine=innodb;
 
-insert into ActiviteSport values(1, 'Pompe 30');
-insert into ActiviteSport values(1, 'Pompe 50');
-insert into ActiviteSport values(1, 'Abdominos 30');
-insert into ActiviteSport values(1, 'Abdominos 50');
-insert into ActiviteSport values(1, 'Squat 30');
-insert into ActiviteSport values(1, 'Squat 50');
-insert into ActiviteSport values(1, 'Squat 100');
-insert into ActiviteSport values(1, '2 km de footing');
-insert into ActiviteSport values(1, 'jogging 1h 30');
+-- insert into ActiviteSport values(1, 'Pompe 30');
+-- insert into ActiviteSport values(1, 'Pompe 50');
+-- insert into ActiviteSport values(1, 'Abdominos 30');
+-- insert into ActiviteSport values(1, 'Abdominos 50');
+-- insert into ActiviteSport values(1, 'Squat 30');
+-- insert into ActiviteSport values(1, 'Squat 50');
+-- insert into ActiviteSport values(1, 'Squat 100');
+-- insert into ActiviteSport values(1, '2 km de footing');
+-- insert into ActiviteSport values(1, 'jogging 1h 30');
 
 --Back Office ==================================
 
