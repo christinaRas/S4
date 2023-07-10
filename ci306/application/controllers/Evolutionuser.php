@@ -21,5 +21,6 @@ class Evolutionuser extends MY_Controller
 
         $this->load->model('Model_evolution');
         $this->Model_evolution->saveEvolution($id_user,$newpoids,$date);
+        $this->vue('evolution');
     }    
 }
