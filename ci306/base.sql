@@ -59,13 +59,13 @@ create table regimeMampitomboplat(
     nomMampitomboplat varchar (100),
     photoMampitomboplat varchar(100)
 );
-insert into regimeMampitomboplat values(null,'Poulet et kabaro','public/images/mampitombo/1.jpg');
-insert into regimeMampitomboplat values(null,'Henakisoa sosy','public/images/mampitombo/2.jpg');
-insert into regimeMampitomboplat values(null,'Noulette sauce','public/images/mampitombo/3.jpg');
-insert into regimeMampitomboplat values(null,'Saucice aux oignons','public/images/mampitombo/4.jpg');
-insert into regimeMampitomboplat values(null,'Cassoulet','public/images/mampitombo/5.jpg');
-insert into regimeMampitomboplat values(null,'Hen omby sy anana','public/images/mampitombo/6.jpg');
-insert into regimeMampitomboplat values(null,'Cottelet sauce','public/images/mampitombo/7.jpg');
+insert into regimeMampitomboplat values(null,'Poulet et kabaro','images/mampitombo/1.jpg');
+insert into regimeMampitomboplat values(null,'Henakisoa sosy','images/mampitombo/2.jpg');
+insert into regimeMampitomboplat values(null,'Noulette sauce','images/mampitombo/3.jpg');
+insert into regimeMampitomboplat values(null,'Saucice aux oignons','images/mampitombo/4.jpg');
+insert into regimeMampitomboplat values(null,'Cassoulet','images/mampitombo/5.jpg');
+insert into regimeMampitomboplat values(null,'Hen omby sy anana','images/mampitombo/6.jpg');
+insert into regimeMampitomboplat values(null,'Cottelet sauce','images/mampitombo/7.jpg');
 
 
 create table regimeMampitombosport(
