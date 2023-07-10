@@ -12,7 +12,7 @@
             <div class="form login">
                 <div class="form-content">
                     <header>Login</header>
-                    <form action="log">
+                    <form action="log" method="post">
                         <div class="field input-field">
                             <input type="email" placeholder="Email" class="input" name="mail">
                         </div>
@@ -37,7 +37,7 @@
             <div class="form signup">
                 <div class="form-content">
                     <header>Signup</header>
-                    <form action="#">
+                    <form action="inscri" method="post">
                         <div class="field input-field">
                             <input type="text" placeholder="User name" class="input" name="nom">
                         </div>

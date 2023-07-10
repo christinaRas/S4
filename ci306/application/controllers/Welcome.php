@@ -14,10 +14,8 @@ class Welcome extends MY_Controller {
 		$pass = $this->input->post("mdp");
 	
 		$this->load->model('Model_login');
-		$userData = $this->Model_login->checkLogin($mail, $pass);
-		if ($userData) {
+		if ($this->Model_login->checkLogin($mail, $pass)) {
 			$this->session->set_userdata('mail', $mail);
-			$this->session->set_userdata($userData);
 			echo "ok";
 		} else {
 			echo "non";
@@ -28,11 +26,11 @@ class Welcome extends MY_Controller {
     public function inscri()
 	{		
 		$nom=$this->input->post("nom");
-		$email=$this->input->post("email");
-		$mdp=$this->input->post("password");
+		$email=$this->input->post("mail");
+		$mdp=$this->input->post("mdp");
 		
 			$this->load->model('Model_login');
-			$this->Model_login->inscri($email,$mdp,$nom);
+			$this->Model_login->inscri($nom,$email,$mdp);
 			$this->vue('login');
 	}
 }
