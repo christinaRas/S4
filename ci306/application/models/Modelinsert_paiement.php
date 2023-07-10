@@ -1,11 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Model_login extends CI_Model {
+class Modelinsert_paiement extends CI_Model {
 
-        public function InsertPaiement($IdUser,$IdArgent,$idEtat)
+        //$idEtat = 1;
+        public function InsertPaiement($id_argent)
         {
-            $sql="insert into user values(null,'".$nom."','".$email."','".$mdp."')";
+            $sql="insert into Paiement(ID_PAIEMENT,ID_USER,ID_ARGENT) values($id_argent, 1 , 2)";
             $query=$this->db->query($sql);
         }
 }
