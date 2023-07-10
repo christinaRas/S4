@@ -10,6 +10,8 @@ $title = basename($url);
 <link href="<?php echo base_url('https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'); ?>" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
 <link rel="stylesheet" href="<?php echo base_url('css/paiement.css'); ?>">
+<link rel="stylesheet" href="<?php echo base_url('css/description.css'); ?>">
+
 
 <!DOCTYPE html>
 <html lang="en">
