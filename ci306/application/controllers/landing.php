@@ -28,7 +28,7 @@ class Landing extends MY_Controller
             header("Location: " . $base_url . '../Augmentation/plat');
             exit();
         } elseif ($choix == 2) {
-           echo 'mbola tsisy';
+            header("Location: " . $base_url . '../Diminution/plat');
         }
     }    
 }
