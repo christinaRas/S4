@@ -40,58 +40,6 @@ $title = basename($url);
   <link href="<?php echo base_url('temp/css/style.css');?>" rel="stylesheet">
   <link href="<?php echo base_url('css/style.css');?>" rel="stylesheet">
 
-  <style>
-   body{
-    font-family: 'Arial';
-   }
-    .imprimer
-    {
-        text-align: center;
-    }
-    .card {
-        width: 16rem;
-        text-align: center;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        display: inline-block;
-        margin-top: 10px;
-        margin-left: 5px;
-    }
-
-    .card-img-top {
-        width: 100%;
-        border-radius: 5px;
-    }
-
-    .card-title {
-        margin-top: 10px;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .card-text {
-        margin-top: 5px;
-    }
-    .cart-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  margin: auto;
-}
-
-.cart-button svg {
-  margin-right: 5px;
-}
-
-.cart-button span {
-  font-weight: bold;
-}
-
-</style>
-
-  </style>
 </body>
 </html>
 <script>
