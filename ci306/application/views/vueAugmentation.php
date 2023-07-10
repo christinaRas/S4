@@ -11,44 +11,31 @@
 
   <!-- css pour step progress -->
   <style>
-  .progress-container {
-display: flex;
-}
+      #progress-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 20px 0;
+      }
 
-.step {
-width: 33.33%;
-text-align: center;
-background-color: #ddd;
-border: 1px solid #fff;
-border-right: none;
-box-sizing: border-box;
-padding: 10px 0;
-position: relative;
-}
+      #progress {
+      height: 4px;
+      width: 0;
+      background-color: #333;
+      }
 
-.step:last-child {
-border-right: 1px solid #fff;
-}
+      .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #ccc;
+      display: inline-block;
+      }
 
-.step::before {
-content: "";
-height: 5px;
-width: 100%;
-background-color: #fff;
-position: absolute;
-top: 10px;
-left: 0;
-z-index: -1;
-}
-
-.step.active {
-background-color: #337ab7;
-color: #fff;
-}
-
-.step.active::before {
-background-color: #337ab7;
-}
+      .active {
+      background-color: #333;
+      }
 </style>
   <!-- fin css pour step progress -->
 
@@ -105,7 +92,6 @@ background-color: #337ab7;
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-      <div class="row">
         <div class="col-lg-8">
           <h1>Welcome to <span>Diet</span></h1>
           <h2>L'endroit faite pour un corps sain et parfait</h2>
@@ -117,8 +103,6 @@ background-color: #337ab7;
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
           <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
         </div>
-
-      </div>
     </div>
   </section><!-- End Hero -->
 
@@ -129,15 +113,21 @@ background-color: #337ab7;
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <!-- step progress -->
-          <div class="progress-container">
-          <div class="step active">Step 1</div>
-          <div class="step">Step 2</div>
-          <div class="step">Step 3</div>
+          
+          <div id="progress-container">
+          <div id="progress"></div>
+          <div class="circle" id="circle-1"></div>
+          <div class="circle" id="circle-2"></div>
+          
           </div>
+          <button id="prev">Previous</button>
+          <button id="next">Next</button>
         <!-- fin step progress -->
 
       </div>
+
+
+      
     </section><!-- End About Section -->
 
     <section id="menu" class="menu section-bg">
