@@ -6,7 +6,66 @@
     <link href="<?php echo base_url('assets/img/favicon.png'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/img/apple-touch-icon.png'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
-    <title>Document</title>
+
+    <!-- css pour step progress -->
+    <style>
+      #progress {
+        position: relative;
+        margin-bottom: 30px;   
+      }
+
+      #progress-bar {
+        position: absolute;
+        background: lightseagreen;
+        height: 5px;
+        width: 0%;
+        top: 50%;
+        left: 0;
+      }
+
+
+      #progress-num {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #progress-num::before {
+        content: "";
+        background-color: lightgray;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        z-index: -1;
+      }
+
+      #progress-num .step {
+        border: 3px solid lightgray;
+        border-radius: 100%;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background-color: #fff;
+        font-family: sans-serif;
+        font-size: 14px;    
+        position: relative;
+        z-index: 1;
+      }
+
+
+      #progress-num .step.active {
+        border-color: lightseagreen;
+        background-color: lightseagreen;
+        color: #fff;
+      }
+</style>
+  <!-- fin css pour step progress -->
+    <title>Diminution</title>
 </head>
 <body>
    
@@ -100,37 +159,69 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
-            <div class="about-img">
-              <img src="<?php echo base_url('assets/img/about.jpg'); ?>" alt="">
+  <h3>Voici les suivis des Jours de votre progression</h3>
+            <div id="progress">
+                <div id="progress-bar"></div>
+                <ul id="progress-num">
+                    <li class="step active">1</li>
+                    <li class="step">2</li>
+                    <li class="step">3</li>
+                    <li class="step">4</li>
+                </ul>
             </div>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div>
 
-      </div>
-    </section><!-- End About Section -->
+            <button id="progress-prev" class="btn" disabled>Prev</button>
+            <button id="progress-next" class="btn">Next</button>
+
+            <script>
+                const progressNext = document.getElementById("progress-next");
+                const progressPrev = document.getElementById("progress-prev");
+                const steps = document.querySelectorAll(".step");
+                const progressBar = document.getElementById("progress-bar");
+
+                let active = 1;
+
+                progressNext.addEventListener("click", () => {
+                    active++;
+                    if (active > steps.length) {
+                        active = steps.length;
+                    }
+                    updateProgress();
+                });
+
+                progressPrev.addEventListener("click", () => {
+                    active--;
+                    if (active < 1) {
+                        active = 1;
+                    }
+                    updateProgress();
+                });
+
+                const updateProgress = () => {
+                    steps.forEach((step, i) => {
+                        if (i < active) {
+                            step.classList.add("active");
+                        } else {
+                            step.classList.remove("active");
+                        }
+                    });
+                    progressBar.style.width = ((active - 1) / (steps.length - 1)) * 100 + "%";
+
+                    if (active === 1) {
+                        progressPrev.disabled = true;
+                    } else if (active === steps.length) {
+                        progressNext.disabled = true;
+                    } else {
+                        progressPrev.disabled = false;
+                        progressNext.disabled = false;
+                    }
+                };
+
+                updateProgress();
+            </script>
+
+    <!-- ======= About Section ======= -->
+    
 
     <section id="menu" class="menu section-bg">
       <div class="container" data-aos="fade-up">
