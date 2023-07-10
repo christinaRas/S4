@@ -54,7 +54,7 @@
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">se deconnecter</a>
+      <a href="<?php echo base_url('../Deconnexion') ?>" class="book-a-table-btn scrollto d-none d-lg-flex">se deconnecter</a>
 
     </div>
   </header><!-- End Header -->
