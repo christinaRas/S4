@@ -8,6 +8,7 @@ create table user
     mail varchar(100),
     mdp varchar(100)
 );
+insert into user values(null,'Christina','christinar@gmail.com','huhu');
 
 CREATE VIEW V_NOMBRECLIENT AS SELECT COUNT(*) FROM USER;
 CREATE TABLE  CODE_ARGENT
