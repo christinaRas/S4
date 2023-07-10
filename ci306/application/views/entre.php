@@ -12,7 +12,7 @@
   <!-- Favicons -->
   <link href="<?php echo base_url('assets/img/favicon.png'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/img/apple-touch-icon.png'); ?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/style1.css'); ?>" rel="stylesheet">
 
 
   <!-- =======================================================
@@ -32,11 +32,14 @@
 
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-phone d-flex align-items-center"><span>ETU2204-ETU2207-ETU2233</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span>48 HEURE DEV</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span>48 HEURE </span></i>
       </div>
     </div>
   </div>
 
+<<<<<<< HEAD
+  <!-- ======= Header ======= --
+=======
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
@@ -57,9 +60,9 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Wallet</a>
-
     </div>
   </header><!-- End Header -->
+>>>>>>> 8b751f70e9f25e7c8b1205adbca3bb5750a9fb96
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -67,7 +70,7 @@
       <div class="row">
         <div class="col-lg-8">
           <h1>Welcome to <span>Diet</span></h1>
-          <h2>L'endroit faite pour une corps saine et parfaite</h2>
+          <h2>L'endroit faite pour un corps sain et parfait</h2>
 
           <div class="btns">
             <a href="<?php echo base_url('../Welcome/index'); ?>" class="btn-book animated fadeInUp scrollto">Se connecter</a>
@@ -79,6 +82,11 @@
 
       </div>
     </div>
+<<<<<<< HEAD
+  </section><!-- End Hero --
+=======
+   
+
   </section><!-- End Hero -->
 
   <main id="main">
@@ -87,29 +95,6 @@
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
 
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
-            <div class="about-img">
-              <img src="assets/img/about.jpg" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
         </div>
 
       </div>
@@ -816,6 +801,7 @@
       </div>
     </div>
   </footer><!-- End Footer -->
+>>>>>>> 8b751f70e9f25e7c8b1205adbca3bb5750a9fb96
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

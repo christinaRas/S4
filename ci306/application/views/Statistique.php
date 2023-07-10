@@ -56,7 +56,7 @@
       labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin'],
       datasets: [{
         label: 'Evolution',
-        data: [60, 70, 80, 82, 79, 75],
+        data: [60, 70, 80, 82, 79, 75], //affichage des intersections x,y
         backgroundColor: 'rgba(54, 162, 235, 0.5)',
         borderColor: 'rgba(54, 162, 235, 1)',
         borderWidth: 1
@@ -83,12 +83,3 @@
   </main><!-- End #main -->
 </body>
 </html>
-
-
-
-
-
-
-
-
-
