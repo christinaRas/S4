@@ -7,18 +7,25 @@ class BackOffice extends MY_Controller {
     {
         $this->vue("BackOfficeLogin");
     }
-    public function FunctionName($user,$mdp)
+    public function BackLog()
     {
-        $user = $this->load->input->post("user");
-        $mdp = $this->load->input->post("mdp");
-            if ($user=="admin" && $mdp=="root") {
-                $this->load->model('Model_BackOffice');
-                $data = array();
-                $data['result'] = $this->Model_BackOffice->getNonValid();
-                $this->vue('BackOffice',$data);        
-            }
+        $user = $this->input->post("user");
+        $mdp = $this->input->post("mdp");
+    
+        if ($user == null) {
+            $user = "men";
+        }
+        if ($mdp == null) {
+            $mdp = "vide";
+        }
+    
+        if ($user == "admin" && $mdp == "root") {
+            $this->getNonValid();
+        } else {
+            $this->vue("BackOfficeLogin");
+        }
     }
-    public function getNonValid()
+        public function getNonValid()
 	{
         $this->load->model('Model_BackOffice');
         $data = array();
@@ -28,10 +35,6 @@ class BackOffice extends MY_Controller {
 	}
     public function validationCode($id_paiement)
     {
-        $this->load->model('Model_BackOffice');
-        $data = array();
-        $data['result'] = $data['result'] = $this->Model_BackOffice->getNonValid();
-        $this->Model_BackOffice->validerCode($id_paiement);
-        $this->vue("BackOffice",$data);
+        $this->getNonValid();      
     }
 }   
