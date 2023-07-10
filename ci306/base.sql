@@ -10,7 +10,7 @@ CREATE TABLE user (
     id_user INT PRIMARY KEY AUTO_INCREMENT,
     nom_user VARCHAR(100),
     mail VARCHAR(100),
-    mdp VARCHAR(100)
+    mdp VARCHAR(100),
 );
 
 INSERT INTO user VALUES (null, 'Christina', 'christinar@gmail.com', 'huhu');

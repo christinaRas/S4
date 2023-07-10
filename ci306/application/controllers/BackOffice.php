@@ -54,7 +54,7 @@ class BackOffice extends MY_Controller {
         $this->load->model('Model_BackOffice');
         $this->Model_BackOffice->listeClient();
         $data = array();
-        $data['result'] = $this->Model_BackOffice->getNonValid();
+        $data['result'] = $this->Model_BackOffice->listeClient();
 		$this->vue('ListeClient',$data);
 
     }    

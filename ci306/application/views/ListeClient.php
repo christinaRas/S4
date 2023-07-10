@@ -47,7 +47,35 @@
     <section class="section dashboard">
     
 
+    <div class="row">
+        <!-- Left side columns -->
+                <div class="card-body">
+                  <table class="table table-borderless datatable">
+                      <form action="#" method="post">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">User</th>
+                        <th scope="col">E_mail</th>
+                        <th scope="col">Mot de Passe</th>
+                        <th scope="col">Action</th>
 
+                      </tr>
+                    </thead>
+                    <tbody>
+                       <?php foreach( $result as $results )  { ?>
+                      <tr>
+                        <th scope="row"><?php echo $results->id_user;  ?></th>
+                        <td><?php echo $results->nom_user;  ?></td>
+                        <td><?php echo $results->mail ; ?></td>
+                        <td><?php echo $results->mdp ; ?></td>
+                        <td><button type="submit" class="btn btn-danger" name="btn" value="<?php echo $results->id_user;  ?>" >Supprimer l'acces</button></td>
+                      </tr>
+                      <?php  }   ?>
+                      </form>
+                    </tbody>
+                  </table>
+                </div>
 
     </section>
   </main><!-- End #main -->
