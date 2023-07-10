@@ -6,34 +6,51 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
 use regime;
 --Front Office =================
-create table user
-(
-    id_user int primary key AUTO_INCREMENT,
-    nom_user varchar(100),
-    mail varchar(100),
-    mdp varchar(100)
+CREATE TABLE user (
+    id_user INT PRIMARY KEY AUTO_INCREMENT,
+    nom_user VARCHAR(100),
+    mail VARCHAR(100),
+    mdp VARCHAR(100)
 );
-insert into user values(null,'Christina','christinar@gmail.com','huhu');
 
-create table Description(
-    idDescription int primary key auto_increment not null,
-    id_user int not null;
-    genre varchar(60),
-    taille double,
-    poids double,
-    FOREIGN KEY (id_user) REFERENCES User(id_user)
-)engine=innodb;
+INSERT INTO user VALUES (null, 'Christina', 'christinar@gmail.com', 'huhu');
 
-insert into Description values();
+CREATE TABLE genre (
+    id_genre INT PRIMARY KEY AUTO_INCREMENT,
+    nom_genre VARCHAR(100)
+);
+
+INSERT INTO genre VALUES (null, 'Homme');
+INSERT INTO genre VALUES (null, 'Femme');
+INSERT INTO genre VALUES (null, 'Transgenre');
+
+CREATE TABLE description (
+    idDescription INT PRIMARY KEY AUTO_INCREMENT,
+    id_user INT NOT NULL,
+    id_genre INT,
+    taille FLOAT,
+    poids FLOAT,
+    FOREIGN KEY (id_user) REFERENCES user (id_user),
+    FOREIGN KEY (id_genre) REFERENCES genre (id_genre)
+);
+
+create table choixRegime
+(
+    id_choix int primary key auto_increment,
+    nom_choix varchar(100)
+);
+insert into choixRegime values(null,'Augmenter de poids');
+insert into choixRegime values(null,'Diminuer de poids');
 
 create table ChoixObjectif(
     idCO int primary key auto_increment not null,
     id_user int not null,
-    idDecription int not null,
-    choix varchar(60),
+    idDescription int not null,
+    id_choix int not null,
     FOREIGN KEY (id_user) REFERENCES User(id_user),
-    FOREIGN KEY (idDescription) REFERENCES Description(idDescription)
-)engine=innodb;
+    FOREIGN KEY (idDescription) REFERENCES Description(idDescription),
+    FOREIGN key (id_choix) references choix(id_choix)
+);
 
 insert into ChoixObjectif values(1,1,1,'hampihena');
 insert into ChoixObjectif values(2,2,2,'hampihena');
