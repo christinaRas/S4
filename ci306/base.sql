@@ -30,8 +30,10 @@ CREATE TABLE description (
     id_genre INT,
     taille FLOAT,
     poids FLOAT,
+    id_choix int not null,
     FOREIGN KEY (id_user) REFERENCES user (id_user),
-    FOREIGN KEY (id_genre) REFERENCES genre (id_genre)
+    FOREIGN KEY (id_genre) REFERENCES genre (id_genre),
+    FOREIGN key (id_choix) references choix(id_choix)
 );
 
 create table choixRegime
@@ -51,12 +53,6 @@ create table ChoixObjectif(
     FOREIGN KEY (idDescription) REFERENCES Description(idDescription),
     FOREIGN key (id_choix) references choix(id_choix)
 );
-
-insert into ChoixObjectif values(1,1,1,'hampihena');
-insert into ChoixObjectif values(2,2,2,'hampihena');
-insert into ChoixObjectif values(3,3,3,'hampitombo');
-insert into ChoixObjectif values(4,4,4,'hampihena');
-insert into ChoixObjectif values(5,5,5,'hampitombo');
 
 create table regimeMampitombo(
     idMampitombo int primary key auto_increment not null,
