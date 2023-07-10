@@ -7,7 +7,9 @@
 </head>
 <body>
     <form action="">
-        
+        <?php foreach ($genres as $genre): ?>
+            <?php echo $genre->nom_genre; ?>
+        <?php endforeach; ?>
     </form>
 </body>
 </html>
