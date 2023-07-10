@@ -132,8 +132,11 @@ insert into regimeMampitombo values(10'','public/images/mampihena/17.jpg');
 
 create table Evolution(
     idE int primary key auto_increment not null,
-    evolution TIME
-)engine=innodb;
+    id_user int,
+    poids int,
+    date Date,
+    FOREIGN key (id_user) REFERENCES user(id_user)
+);
 
 
 CREATE VIEW V_NOMBRECLIENT AS SELECT COUNT(*) as nb FROM USER;

@@ -12,22 +12,32 @@ class Welcome extends MY_Controller {
 	{
 		$mail = $this->input->post("mail");
 		$pass = $this->input->post("mdp");
-	
+
 		$this->load->model('Model_login');
 		if ($this->Model_login->checkLogin($mail, $pass)) {
-			$id = $this->session->userdata('id');
+			$id = $this->session->userdata('id_user');
 			$this->session->set_userdata('mail', $mail);
 
-		$this->load->model('Model_diet');
-        $data = array();
-        $data['genres'] = $this->Model_diet->getGenre();
-        $data['choix'] = $this->Model_diet->getChoixdiet();
+			$this->load->model('Model_login');
+			$retour = $this->Model_login->checkretour($id);
 
-		$this->vue('diet',$data);
+			if (empty($retour))
+			{
+				$this->load->model('Model_diet');
+				$data = array();
+				$data['genres'] = $this->Model_diet->getGenre();
+				$data['choix'] = $this->Model_diet->getChoixdiet();
+
+				$this->vue('diet', $data);
+
+			} else {
+				$this->vue('evolution');
+			}
 		} else {
 			echo "non";
 		}
 	}
+
 	
     public function inscri()
 	{		

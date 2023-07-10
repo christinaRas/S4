@@ -26,4 +26,11 @@ class Model_login extends CI_Model {
             $sql="insert into user values(null,'".$nom."','".$email."','".$mdp."')";
             $query=$this->db->query($sql);
         }
+
+        public function checkretour($id_user)
+        {
+            $sql="SELECT idDescription from description where id_user=".$id_user." ";
+            $query=$this->db->query($sql);
+            return $query->result();
+        }
 }
