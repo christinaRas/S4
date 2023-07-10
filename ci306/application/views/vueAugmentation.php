@@ -31,7 +31,7 @@
         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
         <?php foreach ($plat as $p): ?>
           <div class="col-lg-6 menu-item filter-starters">
-            <img src="<?php echo $p->photoMampitomboplat; ?>" class="menu-img" alt="">
+          <img src="<?php echo base_url($p->photoMampitomboplat); ?>" class="menu-img" alt="">
             <div class="menu-content">
               <a href="#"><?php echo $p->nomMampitomboplat; ?></a><span>$5.95</span>
             </div>
@@ -42,6 +42,6 @@
           <?php endforeach; ?>
         </div>
       </div>
-    </section><!-- End Menu Section -->
+    </section>
 </body>
 </html>

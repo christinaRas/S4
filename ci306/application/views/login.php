@@ -9,9 +9,10 @@
     </head>
     <body>
         <section class="container forms">
-            <div class="form login" style="margin:auto; margin-top:10%; margin-left:24%;">
+            <div class="form login">
                 <div class="form-content">
                     <header>Login</header>
+
                     <form action="<?php echo base_url('../Welcome/log'); ?>" method="post">
                         <div class="field input-field">
                             <input type="email" placeholder="Email" class="input" name="mail">
