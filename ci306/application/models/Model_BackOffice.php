@@ -10,4 +10,8 @@ class Model_BackOffice extends CI_Model {
         $query = $this->db->get();        
         $result = $query->result(); 
     }
+    public function validerCode($id)
+    {
+        
+    }
 }

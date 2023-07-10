@@ -33,8 +33,13 @@ class BackOffice extends MY_Controller {
 		$this->vue('BackOffice',$data);
         // lien vers backOffice http://localhost/S4/ci306/BackOffice
 	}
-    public function validationCode($id_paiement)
+    public function validationCode()
     {
-        $this->getNonValid();      
+        $id_paiement = null;
+        $this->load->model('Model_BackOffice');
+        $data = array();
+        $data['result'] = $data['result'] = $this->Model_BackOffice->getNonValid();
+        $this->Model_BackOffice->validerCode($id_paiement);
+        $this->vue("BackOffice",$data);
     }
 }   
