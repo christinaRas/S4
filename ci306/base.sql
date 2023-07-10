@@ -46,6 +46,8 @@ create table regimeMampitombo(
     imageMampitombo varchar(100)
 )engine=innodb;
 
+insert into regimeMampitombo values(1,'','public/images/');
+
 create table regimeMampihena(
     idMampihena int primary key auto_increment not null,
     titre varchar (100),
