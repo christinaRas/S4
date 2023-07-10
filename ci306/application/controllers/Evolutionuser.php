@@ -20,6 +20,6 @@ class Evolutionuser extends MY_Controller
         $date = $this->input->post("date");
 
         $this->load->model('Model_evolution');
-        $this->Model_diet->saveEvolution($id_user,$newpoids,$date);
+        $this->Model_evolution->saveEvolution($id_user,$newpoids,$date);
     }    
 }
