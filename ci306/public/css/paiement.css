@@ -40,4 +40,14 @@ body {
   button:hover {
     background-color: #45a049;
   }
-  
+
+  .footer{
+    margin-left: 35%;
+    margin-top: 20%
+  }
+
+
+  /* .footer p{
+    margin-left: 32%;
+    margin-top: 20%
+  } */

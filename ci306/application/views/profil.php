@@ -23,7 +23,7 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="montant">Montant</label>
+        <label for="montant">Montant actuel sur votre porte feuille</label>
         <input type="text" id="montant" name="montant" placeholder="Entrez le montant">
       </div>
       <button type="submit">Payer</button>
@@ -32,7 +32,9 @@
   </main>
 
   <footer>
+    <div class="footer">
     <p>&copy; 2023 Mon Site de Paiement. Tous droits réservés.</p>
+    </div>
   </footer>
 </body>
 </html>
