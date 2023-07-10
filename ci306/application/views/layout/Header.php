@@ -40,6 +40,9 @@ $title = basename($url);
   <link href="<?php echo base_url('temp/css/style.css');?>" rel="stylesheet">
   <link href="<?php echo base_url('css/style.css');?>" rel="stylesheet">
 
+
+
+  
 </body>
 </html>
 <script>

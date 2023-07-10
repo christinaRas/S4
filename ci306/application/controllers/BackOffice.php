@@ -20,10 +20,14 @@ class BackOffice extends MY_Controller {
         }
     
         if ($user == "admin" && $mdp == "root") {
-            $this->getNonValid();
+            $this->dashBoard();
         } else {
             $this->vue("BackOfficeLogin");
         }
+    }
+    public function dashBoard()
+    {
+        $this->vue("dashBoard");
     }
         public function getNonValid()
 	{

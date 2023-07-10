@@ -16,13 +16,21 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="<?php echo base_url('../BackOffice/dashBoard');  ?>">
+          <i class="bi bi-card-list"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link collapsed" href="<?php echo base_url('../BackOffice/getNonValid');  ?>">
           <i class="bi bi-grid"></i>
           <span>Code Validation</span>
         </a>
-      </li><!-- End Dashboard Nav -->
-
+      </li>
+    </ul><!-- End Dashboard Nav -->    
+     <!-- End Dashboard Nav -->
+      
 
     </ul>
 
