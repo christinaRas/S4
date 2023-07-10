@@ -20,13 +20,14 @@
           <option value="code1">Code 1</option>
           <option value="code2">Code 2</option>
           <option value="code3">Code 3</option>
-        </select>
+        </select></br>
+        <label for="montant">Montant actuel sur votre porte feuille</label>
+        <button type="submit">Payer</button>
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="montant">Montant actuel sur votre porte feuille</label>
         <input type="text" id="montant" name="montant" placeholder="Entrez le montant">
-      </div>
-      <button type="submit">Payer</button>
+      </div> -->
     </form>
   </div>
   </main>
