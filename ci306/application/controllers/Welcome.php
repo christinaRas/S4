@@ -15,8 +15,9 @@ class Welcome extends MY_Controller {
 	
 		$this->load->model('Model_login');
 		if ($this->Model_login->checkLogin($mail, $pass)) {
+			$this->session->userdata('id_user');
 			$this->session->set_userdata('mail', $mail);
-			$this->vue('profil'); 
+			$this->load->controller('Landing/index');
 		} else {
 			echo "non";
 		}
@@ -29,8 +30,8 @@ class Welcome extends MY_Controller {
 		$email=$this->input->post("mail");
 		$mdp=$this->input->post("mdp");
 		
-			$this->load->model('Model_login');
-			$this->Model_login->inscri($nom,$email,$mdp);
-			$this->vue('login');
+		$this->load->model('Model_login');
+		$this->Model_login->inscri($nom,$email,$mdp);
+		$this->vue('login');
 	}
 }
