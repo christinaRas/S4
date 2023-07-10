@@ -8,6 +8,7 @@ create table user
     mail varchar(100),
     mdp varchar(100)
 );
+CREATE VIEW V_NOMBRECLIENT AS SELECT COUNT(*) FROM USER;
 CREATE TABLE  CODE_ARGENT
 (
     ID_ARGENT INT PRIMARY KEY AUTO_INCREMENT ,
