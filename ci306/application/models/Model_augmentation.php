@@ -16,10 +16,4 @@ class Model_augmentation extends CI_Model {
         $query=$this->db->query($sql);
         return $query->result();
     }
-
-    public function save($id_user,$id_genre,$taille,$poids,$id_choix)
-    {
-        $sql="Insert into description values(null,".$id_user.",".$id_genre.",".$taille.",".$poids.",".$id_choix.")";
-        $query=$this->db->query($sql);
-    }
 }

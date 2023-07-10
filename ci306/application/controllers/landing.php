@@ -25,9 +25,10 @@ class Landing extends MY_Controller
         $this->Model_diet->save($id_user, $genre, $taille, $poids, $choix);
     
         if ($choix == 1) {
-            redirect('Augmentation');
+            header("Location: " . $base_url . '../Augmentation/plat');
+            exit();
         } elseif ($choix == 2) {
-            redirect('Diminution');
+           echo 'mbola tsisy';
         }
     }    
 }
