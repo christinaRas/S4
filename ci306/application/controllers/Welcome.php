@@ -15,15 +15,20 @@ class Welcome extends MY_Controller {
 	
 		$this->load->model('Model_login');
 		if ($this->Model_login->checkLogin($mail, $pass)) {
-			$this->session->userdata('id_user');
+			$id = $this->session->userdata('id');
 			$this->session->set_userdata('mail', $mail);
-			$this->load->controller('Landing/index');
+
+		$this->load->model('Model_diet');
+        $data = array();
+        $data['genres'] = $this->Model_diet->getGenre();
+        $data['choix'] = $this->Model_diet->getChoixdiet();
+
+		$this->vue('diet',$data);
 		} else {
 			echo "non";
 		}
 	}
 	
-
     public function inscri()
 	{		
 		$nom=$this->input->post("nom");
