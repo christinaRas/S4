@@ -12,7 +12,7 @@
             <div class="form login">
                 <div class="form-content">
                     <header>Login</header>
-                    <form action="Welcome/log">
+                    <form action="log">
                         <div class="field input-field">
                             <input type="email" placeholder="Email" class="input" name="mail">
                         </div>
