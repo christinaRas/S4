@@ -32,7 +32,6 @@
                 </div>
             </div>
 
-            <!-- Signup Form -->
 
             <div class="form signup">
                 <div class="form-content">
