@@ -2,11 +2,10 @@
 <html>
 <head>
   <title>Formulaire de Paiement</title>
-  <link rel="stylesheet" href="public/css/paiement.css">
 </head>
 <body>
   <header>
-    <h1>Mon Site de Paiement</h1>
+    <h1>Passons au Paiement</h1>
     <nav>
       <!-- Vos liens de navigation ici -->
     </nav>
