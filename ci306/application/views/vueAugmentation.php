@@ -11,30 +11,59 @@
 
   <!-- css pour step progress -->
   <style>
-      #progress-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      margin: 20px 0;
-      }
-
       #progress {
-      height: 4px;
-      width: 0;
-      background-color: #333;
+        position: relative;
+        margin-bottom: 30px;   
       }
 
-      .circle {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: #ccc;
-      display: inline-block;
+      #progress-bar {
+        position: absolute;
+        background: lightseagreen;
+        height: 5px;
+        width: 0%;
+        top: 50%;
+        left: 0;
       }
 
-      .active {
-      background-color: #333;
+
+      #progress-num {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #progress-num::before {
+        content: "";
+        background-color: lightgray;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        z-index: -1;
+      }
+
+      #progress-num .step {
+        border: 3px solid lightgray;
+        border-radius: 100%;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        background-color: #fff;
+        font-family: sans-serif;
+        font-size: 14px;    
+        position: relative;
+        z-index: 1;
+      }
+
+
+      #progress-num .step.active {
+        border-color: lightseagreen;
+        background-color: lightseagreen;
+        color: #fff;
       }
 </style>
   <!-- fin css pour step progress -->
@@ -104,27 +133,90 @@
           <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
         </div>
     </div>
-  </section><!-- End Hero -->
+  </section><!-- End Hero --> 
+
+
+        <!-- debut step progress -->
+        <div id="progress">
+            <div id="progress-bar"></div>
+              <ul id="progress-num">
+                <li class="step active">1</li>
+                <li class="step">2</li>
+                <li class="step">3</li>
+                <li class="step">4</li>
+              </ul>
+        </div>
+
+        <button id="progress-prev" class="btn" disabled>Prev</button>
+        <button id="progress-next" class="btn">Next</button>
+
+        <script>// step progress
+        
+        progressNext.addEventListener("click", () => {
+            active++;
+            if (active > steps.length) {
+              active = steps.length;
+            }
+            updateProgress();
+          });
+
+          progressPrev.addEventListener("click", () => {
+            active--;
+            if (active < 1) {
+              active = 1;
+            }
+            updateProgress();
+          });
+
+
+          //====================================
+          const updateProgress = () => {
+          // toggle active class on list items
+          steps.forEach((step, i) => {
+            if (i < active) {
+              step.classList.add("active");
+            } else {
+              step.classList.remove("active");
+            }
+          });
+          // set progress bar width  
+          progressBar.style.width = 
+            ((active - 1) / (steps.length - 1)) * 100 + "%";
+          // enable disable prev and next buttons
+          if (active === 1) {
+            progressPrev.disabled = true;
+          } else if (active === steps.length) {
+            progressNext.disabled = true;
+          } else {
+            progressPrev.disabled = false;
+            progressNext.disabled = false;
+          }
+        };
+
+        </script>
+        <!-- // step progress -->
+
+        <!-- fin step progress -->
 
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+    <!-- <section id="about" class="about"> -->
+      <!-- <div class="container" data-aos="fade-up"> -->
 
-        <div class="row">
+        <!-- <div class="row"> -->
           
-          <div id="progress-container">
+          <!-- <div id="progress-container">
           <div id="progress"></div>
           <div class="circle" id="circle-1"></div>
           <div class="circle" id="circle-2"></div>
           
           </div>
           <button id="prev">Previous</button>
-          <button id="next">Next</button>
+          <button id="next">Next</button> -->
         <!-- fin step progress -->
 
-      </div>
+      <!-- </div> -->
 
 
       
