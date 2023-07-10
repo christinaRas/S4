@@ -10,7 +10,7 @@ class Paiement extends MY_Controller {
 
       $this->load->model('Modelinsert_paiement');
       $this->Modelinsert_paiement->InsertPaiement($code);
-      $this->vue('profil');
+      $this->vue('Statistique');
       
     //   $this->vue('code', $code);
 
