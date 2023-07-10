@@ -16,7 +16,7 @@ class Welcome extends MY_Controller {
 		$this->load->model('Model_login');
 		if ($this->Model_login->checkLogin($mail, $pass)) {
 			$this->session->set_userdata('mail', $mail);
-			echo "ok";
+			$this->vue('profil'); 
 		} else {
 			echo "non";
 		}
