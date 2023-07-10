@@ -20,10 +20,17 @@ class BackOffice extends MY_Controller {
         }
     
         if ($user == "admin" && $mdp == "root") {
-            $this->getNonValid();
+            $this->dashBoard();
         } else {
             $this->vue("BackOfficeLogin");
         }
+    }
+    public function dashBoard()
+    {
+        $this->load->model('Model_BackOffice');
+        $data = array();
+        $data['result'] = $this->Model_BackOffice->countClient();
+        $this->vue("dashBoard",$data);
     }
         public function getNonValid()
 	{
@@ -41,5 +48,14 @@ class BackOffice extends MY_Controller {
         $data = array();
         $data['result'] = $this->Model_BackOffice->getNonValid();
 		$this->vue('BackOffice',$data);
+    }
+    public function listeClient()
+    {
+        $this->load->model('Model_BackOffice');
+        $this->Model_BackOffice->listeClient();
+        $data = array();
+        $data['result'] = $this->Model_BackOffice->listeClient();
+		$this->vue('ListeClient',$data);
+
     }    
 }   

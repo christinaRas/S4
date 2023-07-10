@@ -19,4 +19,20 @@ class Model_BackOffice extends CI_Model {
         $this->db->set('ETAT',2);
         $this->db->update('PAIEMENT');
     }
+    public function countClient()
+    {
+        $this->db->select("*");
+        $this->db->from("V_NOMBRECLIENT");
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;
+    }
+    public function listeClient()
+    {
+        $this->db->select("*");
+        $this->db->from("USER");
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result; 
+    }
 }

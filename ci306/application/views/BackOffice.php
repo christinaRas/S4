@@ -14,15 +14,29 @@
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+  <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
-          <span>Code Validation</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
-
+<li class="nav-item">
+    <a class="nav-link collapsed" href="<?php echo base_url('../BackOffice/dashBoard');  ?>">
+      <i class="bi bi-card-list"></i>
+      <span>Dashboard</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="<?php echo base_url('../BackOffice/getNonValid');  ?>">
+      <i class="bi bi-grid"></i>
+      <span>Code Validation</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="<?php echo base_url('../BackOffice/listeClient');  ?>">
+      <i class="bi bi-grid"></i>
+      <span>Gerer les Cient</span>
+    </a>
+  </li>
+</ul>
+     <!-- End Dashboard Nav -->
+      
 
     </ul>
 

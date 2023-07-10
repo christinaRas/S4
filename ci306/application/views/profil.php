@@ -24,10 +24,7 @@
         <label for="montant">Montant actuel sur votre porte feuille</label>
         <button type="submit">Payer</button>
       </div>
-      <!-- <div class="form-group">
-        <label for="montant">Montant actuel sur votre porte feuille</label>
-        <input type="text" id="montant" name="montant" placeholder="Entrez le montant">
-      </div> -->
+     
     </form>
   </div>
   </main>
