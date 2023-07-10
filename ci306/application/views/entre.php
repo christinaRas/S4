@@ -12,7 +12,7 @@
   <!-- Favicons -->
   <link href="<?php echo base_url('assets/img/favicon.png'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/img/apple-touch-icon.png'); ?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
+  <link href="<?php echo base_url('assets/css/style1.css'); ?>" rel="stylesheet">
 
 
   <!-- =======================================================
@@ -32,11 +32,14 @@
 
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-phone d-flex align-items-center"><span>ETU2204-ETU2207-ETU2233</span></i>
-        <i class="bi bi-clock d-flex align-items-center ms-4"><span>48 HEURE DEV</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span>48 HEURE </span></i>
       </div>
     </div>
   </div>
 
+<<<<<<< HEAD
+  <!-- ======= Header ======= --
+=======
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
@@ -59,6 +62,7 @@
       <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Wallet</a>
     </div>
   </header><!-- End Header -->
+>>>>>>> 8b751f70e9f25e7c8b1205adbca3bb5750a9fb96
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -78,6 +82,9 @@
 
       </div>
     </div>
+<<<<<<< HEAD
+  </section><!-- End Hero --
+=======
    
 
   </section><!-- End Hero -->
@@ -794,6 +801,7 @@
       </div>
     </div>
   </footer><!-- End Footer -->
+>>>>>>> 8b751f70e9f25e7c8b1205adbca3bb5750a9fb96
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
