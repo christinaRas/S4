@@ -23,6 +23,8 @@ create table Description(
     FOREIGN KEY (id_user) REFERENCES User(id_user)
 )engine=innodb;
 
+insert into Description values();
+
 create table ChoixObjectif(
     idCO int primary key auto_increment not null,
     id_user int not null,
@@ -31,6 +33,12 @@ create table ChoixObjectif(
     FOREIGN KEY (id_user) REFERENCES User(id_user),
     FOREIGN KEY (idDescription) REFERENCES Description(idDescription)
 )engine=innodb;
+
+insert into ChoixObjectif values(1,1,1,'hampihena');
+insert into ChoixObjectif values(2,2,2,'hampihena');
+insert into ChoixObjectif values(3,3,3,'hampitombo');
+insert into ChoixObjectif values(4,4,4,'hampihena');
+insert into ChoixObjectif values(5,5,5,'hampitombo');
 
 create table regimeMampitombo(
     idMampitombo int primary key auto_increment not null,
