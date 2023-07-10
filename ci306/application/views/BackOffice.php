@@ -28,6 +28,12 @@
           <span>Code Validation</span>
         </a>
       </li>
+      <li class="nav-item">
+    <a class="nav-link collapsed" href="<?php echo base_url('../BackOffice/getNonValid');  ?>">
+      <i class="bi bi-grid"></i>
+      <span>Gerer les Cient</span>
+    </a>
+  </li>
     </ul><!-- End Dashboard Nav -->    
      <!-- End Dashboard Nav -->
       

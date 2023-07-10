@@ -27,7 +27,10 @@ class BackOffice extends MY_Controller {
     }
     public function dashBoard()
     {
-        $this->vue("dashBoard");
+        $this->load->model('Model_BackOffice');
+        $data = array();
+        $data['result'] = $this->Model_BackOffice->countClient();
+        $this->vue("dashBoard",$data);
     }
         public function getNonValid()
 	{
@@ -45,5 +48,14 @@ class BackOffice extends MY_Controller {
         $data = array();
         $data['result'] = $this->Model_BackOffice->getNonValid();
 		$this->vue('BackOffice',$data);
+    }
+    public function listeClient()
+    {
+        $this->load->model('Model_BackOffice');
+        $this->Model_BackOffice->listeClient();
+        $data = array();
+        $data['result'] = $this->Model_BackOffice->getNonValid();
+		$this->vue('BackOffice',$data);
+
     }    
 }   

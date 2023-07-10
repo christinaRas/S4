@@ -14,3 +14,4 @@
 
   <!-- Template Main JS File -->
   <script src="<?php echo base_url('temp/js/main.js');?>"></script>
+</footer>
