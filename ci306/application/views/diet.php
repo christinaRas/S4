@@ -58,6 +58,11 @@
             margin-top : 10%;
         }
 
+        form p{
+            text-align : center;
+            font-weight : bold; 
+        }
+
         form input[type="number"],
         form select {
             width: 100%;
@@ -87,7 +92,7 @@
 </head>
 <body>
     <form action="<?php echo base_url('../Landing/savediet'); ?>" method="post">
-    <p class="titre" style ="text-align:center">Veuillez remplir ce Formulaire avant de continuer</p>
+    <p class="titre">Veuillez remplir ce Formulaire avant de continuer</p>
         <input type="number" name="poids" placeholder="poids actuel" id="" requierd>
         <input type="number" name="taille" placeholder="taille actuel" id="" requierd>
         <select name="genre" id="">
