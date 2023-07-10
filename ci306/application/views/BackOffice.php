@@ -39,41 +39,36 @@
         </ol>
       </nav> -->
     </div><!-- End Page Title -->
-
     <section class="section dashboard">
       <div class="row">
-
         <!-- Left side columns -->
-
                 <div class="card-body">
                   <h5 class="card-title">Code a Valider </h5>
-
                   <table class="table table-borderless datatable">
                       <form action="<?php echo base_url('../BackOffice/validationCode'); ?>" method="post">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Code</th>
                         <th scope="col">User</th>
+                        <th scope="col">Code</th>
                         <th scope="col">Valider le code</th>
                       </tr>
                     </thead>
                     <tbody>
+                       <?php foreach( $result as $results ): ?>
                       <tr>
-                        <th scope="row"><a href="#">#2457</a></th>
-                        <td>123</td>
-                        <td>Mendrika</td>
-                        <td><button type="submit" class="btn btn-primary" value="1" >Accepter</button></td>
+                        <th scope="row"><a href="#"><?php echo $results->ID_PAIEMENT;  ?></th>
+                        <td><?php echo $results->ID_USER;  ?></td>
+                        <td><?php echo $results->ID_ARGENT ; ?></td>
+                        <td><button type="submit" class="btn btn-primary" name="btn" value="<?php echo $results->ID_PAIEMENT;  ?>" >Accepter</button></td>
                       </tr>
+                      <?php  endforeach; ?>
                       </form>
                     </tbody>
                   </table>
-
                 </div>
     </section>
-
   </main><!-- End #main -->
-
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">

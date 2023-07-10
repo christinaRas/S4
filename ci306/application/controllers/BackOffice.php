@@ -35,11 +35,11 @@ class BackOffice extends MY_Controller {
 	}
     public function validationCode()
     {
-        $id_paiement = null;
+        $id_paiement = $this->input->post("btn");
         $this->load->model('Model_BackOffice');
+        $this->Model_BackOffice->validationCode($id_paiement);
         $data = array();
-        $data['result'] = $data['result'] = $this->Model_BackOffice->getNonValid();
-        $this->Model_BackOffice->validerCode($id_paiement);
-        $this->vue("BackOffice",$data);
-    }
+        $data['result'] = $this->Model_BackOffice->getNonValid();
+		$this->vue('BackOffice',$data);
+    }    
 }   
