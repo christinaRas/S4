@@ -9,6 +9,49 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+  <!-- css pour step progress -->
+  <style>
+  .progress-container {
+display: flex;
+}
+
+.step {
+width: 33.33%;
+text-align: center;
+background-color: #ddd;
+border: 1px solid #fff;
+border-right: none;
+box-sizing: border-box;
+padding: 10px 0;
+position: relative;
+}
+
+.step:last-child {
+border-right: 1px solid #fff;
+}
+
+.step::before {
+content: "";
+height: 5px;
+width: 100%;
+background-color: #fff;
+position: absolute;
+top: 10px;
+left: 0;
+z-index: -1;
+}
+
+.step.active {
+background-color: #337ab7;
+color: #fff;
+}
+
+.step.active::before {
+background-color: #337ab7;
+}
+</style>
+  <!-- fin css pour step progress -->
+
   <!-- Favicons -->
   <link href="<?php echo base_url('assets/img/favicon.png'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/img/apple-touch-icon.png'); ?>" rel="stylesheet">
@@ -65,7 +108,7 @@
       <div class="row">
         <div class="col-lg-8">
           <h1>Welcome to <span>Diet</span></h1>
-          <h2>L'endroit faite pour une corps saine et parfaite</h2>
+          <h2>L'endroit faite pour un corps sain et parfait</h2>
 
           <div class="btns">
             <a href="<?php echo base_url('../Welcome/index'); ?>" class="btn-book animated fadeInUp scrollto">Wallet</a>
@@ -86,29 +129,13 @@
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
-            <div class="about-img">
-              <img src="<?php echo base_url('assets/img/about.jpg'); ?>" alt="">
-            </div>
+          <!-- step progress -->
+          <div class="progress-container">
+          <div class="step active">Step 1</div>
+          <div class="step">Step 2</div>
+          <div class="step">Step 3</div>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div>
+        <!-- fin step progress -->
 
       </div>
     </section><!-- End About Section -->
