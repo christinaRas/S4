@@ -5,13 +5,13 @@ class Welcome extends MY_Controller {
 
     public function index()
 	{
-		$this->load->view('login');
+		$this->vue('login');
 	}
 
     public function log()
 	{
-		$mail = $this->input->post("email");
-		$pass = $this->input->post("password");
+		$mail = $this->input->post("mail");
+		$pass = $this->input->post("mdp");
 		
 		$this->load->model('Model_login');
 		if($this->Model_login->checkLogin($mail,$pass))
@@ -20,7 +20,7 @@ class Welcome extends MY_Controller {
 			$id = $this->session->userdata('id');
 		$this->load->model('Model_login');
 		$data['valiny'] = $this->Model_login->autre($id);
-		$this->load->view('profil',$data);
+		$this->vue('profil',$data);
 		}else{
 			$this->vue('login');
 		}
@@ -33,6 +33,6 @@ class Welcome extends MY_Controller {
 		
 			$this->load->model('Model_login');
 			$this->Model_login->inscri($email,$mdp,$nom);
-			$this->load->view('login');
+			$this->vue('login');
 	}
 }

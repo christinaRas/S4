@@ -7,44 +7,8 @@ $title = basename($url);
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
-<link href="<?php echo base_url('vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button class="navbar-toggler" type="button" data-toggle='collapse' datatarget='#navbarNav' aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle-navigation">
-            <span class='navbar-toggler-icon'></span>
-        </button>
-        <a class="navbar-brand" href="#">FACTURE PDF</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-            
-            <!-- <li class="nav-item active">
-                    <a href="Achat" class="nav-link">Achat</a>
-            </li> -->
-            <li class="nav-item active">
-                    <a href="Client" class="nav-link">Facture client</a>
-            </li>
-            <li class="nav-item active">
-                    <a href="Facture" class="nav-link">Voir tout</a>
-            </li>
-           
-            
-            </ul>
-        </div>
-        <form action="search" method="get" class="form-inline ml-2">
-            <input name="search" id="facture" class="form from-control mr-sm-2" type="number" placeholder="Numero de facture">
-            <!-- <input name="produit" id="designation"  class="form from-control mr-sm-2" type="text" placeholder="Produit"> -->
-            <button class="btn btn-outline-light my-2 my-sm-o">Search</button>
-        </form>
-    </nav>        
-</header>  
-       <?php 
-        if ($title!='Client' && $title!='imprimer') {
-          echo '        <form action="RechercheProduit" method="get" class="form-inline ml-2">
-          <input name="produit" id="facture" class="form from-control mr-sm-2" type="text" placeholder="Produit??">
-        <button class="btn btn-outline-dark my-2 my-sm-o">Search</button>';
-        }
-       ?>
-</form>
+<link href="<?php echo base_url('https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'); ?>" rel="stylesheet">
+<link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
   <style>
    body{
     font-family: 'Arial';
@@ -108,5 +72,4 @@ $title = basename($url);
         html2pdf().from(all).save();
     })
 }
-
 </script>
