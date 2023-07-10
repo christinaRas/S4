@@ -49,7 +49,7 @@
                   <h5 class="card-title">Code a Valider </h5>
 
                   <table class="table table-borderless datatable">
-                      <form action="Traitement" method="post"></form>
+                      <form action="<?php echo base_url('../BackOffice/validationCode'); ?>" method="post">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -63,9 +63,9 @@
                         <th scope="row"><a href="#">#2457</a></th>
                         <td>123</td>
                         <td>Mendrika</td>
-                        <td><button type="submit" class="btn btn-primary">Accepter</button></td>
+                        <td><button type="submit" class="btn btn-primary" value="1" >Accepter</button></td>
                       </tr>
-                     
+                      </form>
                     </tbody>
                   </table>
 
