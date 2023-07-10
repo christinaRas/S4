@@ -17,7 +17,7 @@ class Welcome extends MY_Controller {
 		if ($this->Model_login->checkLogin($mail, $pass)) {
 			$this->session->userdata('id_user');
 			$this->session->set_userdata('mail', $mail);
-			$this->load->Controller('Landing');
+			$this->load->controller('Landing/index');
 		} else {
 			echo "non";
 		}
