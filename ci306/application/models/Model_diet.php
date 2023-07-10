@@ -17,8 +17,9 @@ class Model_diet extends CI_Model {
         return $query->result();
     }
 
-    public function save()
+    public function save($id_user,$id_genre,$taille,$poids,$id_choix)
     {
-        $sql="INSERT INTO "
+        $sql="Insert into description values(null,".$id_user.",".$id_genre.",".$taille.",".$poids.",".$id_choix.")";
+        $query=$this->db->query($sql);
     }
 }
