@@ -7,9 +7,19 @@
 </head>
 <body>
     <form action="">
-        <?php foreach ($genres as $genre): ?>
-            <?php echo $genre->nom_genre; ?>
-        <?php endforeach; ?>
+        <input type="number" name="Poids" placeholder="poids actuel" id="">
+        <input type="number" name="Taille" placeholder="taille actuel" id="">
+        <select name="genre" id="">
+            <?php foreach ($genres as $genre): ?>
+                <option value=""><?php echo $genre->nom_genre; ?></option>
+            <?php endforeach; ?>
+        </select>
+        <select name="choix" id="">
+            <?php foreach ($choix as $c): ?>
+                <option value=""><?php echo $c->nom_choix; ?></option>
+            <?php endforeach; ?>
+        </select>
+        <input type="submit" value="valider">
     </form>
 </body>
 </html>
