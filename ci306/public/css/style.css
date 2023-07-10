@@ -24,6 +24,13 @@
     padding: 30px;
     border-radius: 6px;
     background: #FFF;
+
+}
+
+.form .login{
+    margin:auto;
+    margin-top:10%;
+    margin-left:24%;
 }
 .form.signup{
     opacity: 0;
