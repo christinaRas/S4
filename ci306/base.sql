@@ -10,7 +10,7 @@ CREATE TABLE user (
     id_user INT PRIMARY KEY AUTO_INCREMENT,
     nom_user VARCHAR(100),
     mail VARCHAR(100),
-    mdp VARCHAR(100),
+    mdp VARCHAR(100)
 );
 
 INSERT INTO user VALUES (null, 'Christina', 'christinar@gmail.com', 'huhu');
@@ -24,6 +24,14 @@ INSERT INTO genre VALUES (null, 'Homme');
 INSERT INTO genre VALUES (null, 'Femme');
 INSERT INTO genre VALUES (null, 'Transgenre');
 
+create table choixRegime
+(
+    id_choix int primary key auto_increment,
+    nom_choix varchar(100)
+);
+insert into choixRegime values(null,'Augmenter de poids');
+insert into choixRegime values(null,'Diminuer de poids');
+
 CREATE TABLE description (
     idDescription INT PRIMARY KEY AUTO_INCREMENT,
     id_user INT NOT NULL,
@@ -33,16 +41,9 @@ CREATE TABLE description (
     id_choix int not null,
     FOREIGN KEY (id_user) REFERENCES user (id_user),
     FOREIGN KEY (id_genre) REFERENCES genre (id_genre),
-    FOREIGN key (id_choix) references choix(id_choix)
+    FOREIGN key (id_choix) references choixRegime(id_choix)
 );
 
-create table choixRegime
-(
-    id_choix int primary key auto_increment,
-    nom_choix varchar(100)
-);
-insert into choixRegime values(null,'Augmenter de poids');
-insert into choixRegime values(null,'Diminuer de poids');
 
 create table ChoixObjectif(
     idCO int primary key auto_increment not null,
