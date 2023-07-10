@@ -94,6 +94,14 @@ create table regimeMampihenaplat(
     nomMampihenaplat varchar (100),
     photoMampihenaplat varchar(100)
 );
+insert into regimeMampihenaplat values(null,'Achard d aricot vert','images/mampihena/8.jpg');
+insert into regimeMampihenaplat values(null,'Patte legere','images/mampihena/9.jpg');
+insert into regimeMampihenaplat values(null,'Soupe de potirond','images/mampihena/10.jpg');
+insert into regimeMampihenaplat values(null,'Coussecousse','images/mampihena/11.jpg');
+insert into regimeMampihenaplat values(null,'Poulet et brocolit','images/mampihena/12.jpg');
+insert into regimeMampihenaplat values(null,'Salade de legume et patte','images/mampihena/13.jpg');
+insert into regimeMampihenaplat values(null,'Tomate et polet','images/mampihena/14.jpg');
+
 
 create table regimeMampihenasport(
     idMampihenasport int primary key auto_increment not null,
@@ -103,16 +111,16 @@ create table regimeMampihenasport(
 );
 
 
-insert into regimeMampitombo values(1,'','public/images/mampihena/8.jpg');
-insert into regimeMampitombo values(2,'','public/images/mampihena/9.jpg');
-insert into regimeMampitombo values(3,'','public/images/mampihena/10.jpg');
-insert into regimeMampitombo values(4,'','public/images/mampihena/11.jpg');
-insert into regimeMampitombo values(5,'','public/images/mampihena/12.jpg');
-insert into regimeMampitombo values(6,'','public/images/mampihena/13.jpg');
-insert into regimeMampitombo values(7,'','public/images/mampihena/14.jpg');
-insert into regimeMampitombo values(8,'','public/images/mampihena/15.jpg');
-insert into regimeMampitombo values(9,'','public/images/mampihena/16.jpg');
-insert into regimeMampitombo values(10'','public/images/mampihena/17.jpg');
+insert into regimeMampitombo values(1,'','images/mampihena/8.jpg');
+insert into regimeMampitombo values(2,'','images/mampihena/9.jpg');
+insert into regimeMampitombo values(3,'','images/mampihena/10.jpg');
+insert into regimeMampitombo values(4,'','images/mampihena/11.jpg');
+insert into regimeMampitombo values(5,'','images/mampihena/12.jpg');
+insert into regimeMampitombo values(6,'','images/mampihena/13.jpg');
+insert into regimeMampitombo values(7,'','images/mampihena/14.jpg');
+insert into regimeMampitombo values(8,'','images/mampihena/15.jpg');
+insert into regimeMampitombo values(9,'','images/mampihena/16.jpg');
+insert into regimeMampitombo values(10'','images/mampihena/17.jpg');
 
 -- create table ActiviteSport(
 --     idAS int primary key auto_increment not null,
