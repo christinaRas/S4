@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/Facture/ci306/public/';
+$config['base_url'] = 'http://localhost/s4/S4/ci306/public/';
 
 /*
 |--------------------------------------------------------------------------
