@@ -16,4 +16,9 @@ class Model_diet extends CI_Model {
         $query=$this->db->query($sql);
         return $query->result();
     }
+
+    public function save()
+    {
+        $sql="INSERT INTO "
+    }
 }

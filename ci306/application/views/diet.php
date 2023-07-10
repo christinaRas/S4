@@ -19,6 +19,7 @@
                 <option value=""><?php echo $c->nom_choix; ?></option>
             <?php endforeach; ?>
         </select>
+        <input type="submit" value="valider">
     </form>
 </body>
 </html>

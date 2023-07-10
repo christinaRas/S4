@@ -11,4 +11,9 @@ class Landing extends MY_Controller
         $data['choix'] = $this->Model_diet->getChoixdiet();
         $this->load->view('diet', $data);
     }
+    
+    public function savediet()
+    {
+        
+    }
 }
