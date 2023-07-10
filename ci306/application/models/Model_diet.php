@@ -5,14 +5,14 @@ class Model_diet extends CI_Model {
 
     public function getGenre()
     {
-        $sql="Select * from genre";
+        $sql="SELECT * from genre";
         $query=$this->db->query($sql);
         return $query->result();
     }
 
     public function getChoixdiet()
     {
-        $sql="Select * from choixRegime";
+        $sql="SELECT * from choixRegime";
         $query=$this->db->query($sql);
         return $query->result();
     }
