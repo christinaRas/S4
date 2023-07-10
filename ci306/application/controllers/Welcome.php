@@ -26,10 +26,10 @@ class Welcome extends MY_Controller {
 		}
 	}
     public function inscri()
-	{
+	{		
+		$nom=$this->input->post("nom");
 		$email=$this->input->post("email");
 		$mdp=$this->input->post("password");
-		$nom=$this->input->post("nom");
 		
 			$this->load->model('Model_login');
 			$this->Model_login->inscri($email,$mdp,$nom);

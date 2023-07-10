@@ -3,11 +3,12 @@ use regime;
 
 create table user
 (
-    id_user int,
+    id_user int primary key AUTO_INCREMENT,
     nom_user varchar(100),
     mail varchar(100),
     mdp varchar(100)
 );
+
 CREATE VIEW V_NOMBRECLIENT AS SELECT COUNT(*) FROM USER;
 CREATE TABLE  CODE_ARGENT
 (

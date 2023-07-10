@@ -21,7 +21,7 @@ class Model_login extends CI_Model {
             }
             return $valiny;
         }
-        public function inscri($email,$mdp,$nom)
+        public function inscri($nom,$email,$mdp)
         {
             $photo='assets/img/men.jpg';
             $sql="insert into user values(null,'".$email."','".$mdp."','".$nom."')";

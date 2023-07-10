@@ -39,11 +39,11 @@
                     <header>Signup</header>
                     <form action="#">
                         <div class="field input-field">
-                            <input type="email" placeholder="Email" class="input" name="mail">
+                            <input type="text" placeholder="User name" class="input" name="nom">
                         </div>
 
                         <div class="field input-field">
-                            <input type="text" placeholder="User name" class="input" name="nom">
+                            <input type="email" placeholder="Email" class="input" name="mail">
                         </div>
 
                         <div class="field input-field">
