@@ -22,7 +22,7 @@ class Model_BackOffice extends CI_Model {
     public function countClient()
     {
         $this->db->select("*");
-        $this->db->from("V_NOMBRECLIENT");
+        $this->db->from("v_nombreclient");
         $query = $this->db->get();
         $result = $query->result();
         return $result;

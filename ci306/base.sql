@@ -169,7 +169,7 @@ create table paiement (
 );
 
 insert into paiement (id_paiement, id_user, id_argent, etat) values (null, 1, 1, 1);
-insert into paiement (id_paiement, id_user, id_argent, etat) values (null, 3, 1, 1);
+insert into paiement (id_paiement, id_user, id_argent, etat) values (null, 2, 1, 1);
 
 -- 1 NON VALIDER
 -- 2 VALIDER

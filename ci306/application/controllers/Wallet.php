@@ -5,8 +5,10 @@ class Wallet extends MY_Controller
 
     public function index()
     {
+        $id = $this->session->userdata('id_user');
         $this->load->model("WalletModel");
-        $this->WalletModel->getEa
-        $this->vue('Wallet');
+        $data = array();
+       $data['result'] = $this->WalletModel->getWalletUser($id);
+        $this->vue('Wallet',$data);
     }
 }
