@@ -148,46 +148,48 @@ create table Evolution(
 );
 
 
-CREATE VIEW V_NOMBRECLIENT AS SELECT COUNT(*) as nb FROM user;
-CREATE TABLE  CODE_ARGENT
-(
-    ID_ARGENT INT PRIMARY KEY AUTO_INCREMENT ,
-    CODE VARCHAR(14) ,
-    VALEUR FLOAT
-);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"123",10000);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"246",20000);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"4321",30000);
+create view v_nombreclient as select count(*) as nb from user;
 
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"12",40000);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"34",50000);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"56",60000);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"78",70000);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"90",80000);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"121",90000);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"122",500);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"124",100);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"990",200);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"3245",300);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"45634",400);
-INSERT INTO CODE_ARGENT (ID_ARGENT,CODE,VALEUR) VALUES (NULL,"38488",750);
-
-CREATE TABLE PAIEMENT
-(
-    ID_PAIEMENT INT PRIMARY KEY AUTO_INCREMENT ,
-    ID_USER INT ,
-    ID_ARGENT INT ,
-    ETAT INT,
-    FOREIGN KEY (ID_USER) REFERENCES USER(ID_USER),
-    FOREIGN KEY (ID_ARGENT) REFERENCES CODE_ARGENT(ID_ARGENT)
+create table code_argent (
+    id_argent int primary key auto_increment,
+    code varchar(14),
+    valeur float
 );
-INSERT INTO   PAIEMENT (ID_PAIEMENT,ID_USER,ID_ARGENT,ETAT) VALUES(NULL,1,1,1);
-INSERT INTO   PAIEMENT (ID_PAIEMENT,ID_USER,ID_ARGENT,ETAT) VALUES(NULL,3,1,1);
+
+insert into code_argent (id_argent, code, valeur) values (null, "123", 10000);
+insert into code_argent (id_argent, code, valeur) values (null, "246", 20000);
+insert into code_argent (id_argent, code, valeur) values (null, "4321", 30000);
+insert into code_argent (id_argent, code, valeur) values (null, "12", 40000);
+insert into code_argent (id_argent, code, valeur) values (null, "34", 50000);
+insert into code_argent (id_argent, code, valeur) values (null, "56", 60000);
+insert into code_argent (id_argent, code, valeur) values (null, "78", 70000);
+insert into code_argent (id_argent, code, valeur) values (null, "90", 80000);
+insert into code_argent (id_argent, code, valeur) values (null, "121", 90000);
+insert into code_argent (id_argent, code, valeur) values (null, "122", 500);
+insert into code_argent (id_argent, code, valeur) values (null, "124", 100);
+insert into code_argent (id_argent, code, valeur) values (null, "990", 200);
+insert into code_argent (id_argent, code, valeur) values (null, "3245", 300);
+insert into code_argent (id_argent, code, valeur) values (null, "45634", 400);
+insert into code_argent (id_argent, code, valeur) values (null, "38488", 750);
+
+create table paiement (
+    id_paiement int primary key auto_increment,
+    id_user int,
+    id_argent int,
+    etat int,
+    foreign key (id_user) references user(id_user),
+    foreign key (id_argent) references code_argent(id_argent)
+);
+
+insert into paiement (id_paiement, id_user, id_argent, etat) values (null, 1, 1, 1);
+insert into paiement (id_paiement, id_user, id_argent, etat) values (null, 3, 1, 1);
 
 -- 1 NON VALIDER
 -- 2 VALIDER
-CREATE OR REPLACE VIEW PORTE_FEUILLE AS SELECT PAIEMENT.ID_USER,SUM(CODE_ARGENT.VALEUR) AS TOTAL FROM PAIEMENT
-JOIN  CODE_ARGENT ON PAIEMENT.ID_ARGENT = CODE_ARGENT.ID_ARGENT  GROUP by PAIEMENT.id_user;
+create or replace view porte_feuille as select paiement.id_user, sum(code_argent.valeur) as total
+from paiement
+join code_argent on paiement.id_argent = code_argent.id_argent
+group by paiement.id_user;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

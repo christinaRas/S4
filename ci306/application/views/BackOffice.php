@@ -71,10 +71,10 @@
                     <tbody>
                        <?php foreach( $result as $results ): ?>
                       <tr>
-                        <th scope="row"><a href="#"><?php echo $results->ID_PAIEMENT;  ?></th>
-                        <td><?php echo $results->ID_USER;  ?></td>
-                        <td><?php echo $results->ID_ARGENT ; ?></td>
-                        <td><button type="submit" class="btn btn-primary" name="btn" value="<?php echo $results->ID_PAIEMENT;  ?>" >Accepter</button></td>
+                        <th scope="row"><a href="#"><?php echo $results->id_paiement;  ?></th>
+                        <td><?php echo $results->id_user;  ?></td>
+                        <td><?php echo $results->id_argent ; ?></td>
+                        <td><button type="submit" class="btn btn-primary" name="btn" value="<?php echo $results->id_paiement;  ?>" >Accepter</button></td>
                       </tr>
                       <?php  endforeach; ?>
                       </form>
