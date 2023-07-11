@@ -110,6 +110,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
+
   <section id="hero" class="d-flex align-items-center bg-dark text-light">
   <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
     <div class="col-lg-8">
@@ -124,9 +125,20 @@
     </div>
   </div>
 </section><!-- End Hero -->
+<section id="about" class="d-flex align-items-center bg-dark text-light">
+<div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="col-lg-8">
+      <h1>Votre IMC au debut:10.1</h1>
+      <h1>Votre Objectif :12.1</h1>
+      <h1>Votre IMC actuelle :12.1</h1>
 
-  <main id="main">
-  </main>
+      <div class="btns">
+        <a href="<?php echo base_url('../Statistique/stat'); ?>" class="btn-book animated fadeInUp scrollto">Voir votre Evolution</a>
+      </div>
+    </div>
+  </div>
+</section>
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
