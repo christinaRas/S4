@@ -30,6 +30,7 @@ create table choixRegime
 );
 insert into choixRegime values(null,'Augmenter de poids');
 insert into choixRegime values(null,'Diminuer de poids');
+insert into choixRegime values(null,'Avoir mon IMC ideal');
 
 CREATE TABLE description (
     idDescription INT PRIMARY KEY AUTO_INCREMENT,

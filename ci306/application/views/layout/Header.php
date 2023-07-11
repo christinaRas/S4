@@ -40,11 +40,7 @@ $title = basename($url);
   <link href="<?php   echo base_url('temp/vendor/simple-datatables/style.css');?>" rel="stylesheet">
   <!-- Template Main CSS File -->
   <link href="<?php echo base_url('temp/css/style.css');?>" rel="stylesheet">
-  <link href="<?php echo base_url('css/style.css');?>" rel="stylesheet">
-
-
-
-  
+  <link href="<?php echo base_url('css/style.css');?>" rel="stylesheet">  
 </body>
 </html>
 <script>

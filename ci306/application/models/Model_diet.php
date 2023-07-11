@@ -22,4 +22,16 @@ class Model_diet extends CI_Model {
         $sql="Insert into description values(null,".$id_user.",".$id_genre.",".$taille.",".$poids.",".$id_choix.")";
         $query=$this->db->query($sql);
     }
+    public function getImcDepart($poids,$taille)
+    {
+        $taille = $taille/10;//conversion de taille en m
+        $imc = $poids/ ($taille * $taille);
+        return $imc;
+    }
+    public function getImcEvolution($poids,$taille)
+    {
+        $taille = $taille/10;//conversion de taille en m
+        $imc = $poids/$taille * $taille;
+        return $imc;
+    }
 }
