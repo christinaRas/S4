@@ -33,7 +33,7 @@ class Wallet extends MY_Controller
         );
         if ($this->db->insert("paiement",$data))
         {
-            $this->insertCode();
+            $this->codeValid();
         }else {
             $this->error();
         }
