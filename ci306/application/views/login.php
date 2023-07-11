@@ -8,7 +8,7 @@
         <title> Responsive Login and Signup Form </title>
     </head>
     <body>
-        <section class="container forms">
+        <section class="container1 forms">
             <div class="form login">
                 <div class="form-content">
                     <header>Login</header>

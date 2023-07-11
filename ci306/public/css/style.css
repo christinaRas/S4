@@ -7,28 +7,26 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-.container{
+.container1 {
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-=======
-    
-    background-size: 100%;
->>>>>>> dcc12827b75f5c628c4868a66fd269a524fe21ed
+    background-color: #cda45e;
     column-gap: 30px;
 }
-.form{
+
+.form {
     position: absolute;
     max-width: 430px;
     width: 100%;
     padding: 30px;
     border-radius: 6px;
-    background: #FFF;
-
+    background-color: rgba(255, 255, 255, 0.556); /* Couleur de fond semi-transparente */
+    opacity: 0.8; /* Opacité de l'élément */
 }
+
 
 .form .login{
     margin:auto;
