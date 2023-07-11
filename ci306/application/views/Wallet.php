@@ -65,6 +65,45 @@
         background-color: lightseagreen;
         color: #fff;
       }
+      #menu {
+  padding: 50px 0;
+}
+
+#menu .container {
+  max-width: 960px;
+}
+
+#menu form {
+  margin-top: 30px;
+}
+
+#menu label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#menu input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#menu button[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#menu button[type="submit"]:hover {
+  background-color: #0056b3;
+}
 </style>
   <!-- fin css pour step progress -->
 
@@ -98,7 +137,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">Objectif</a></li>
-          <li><a class="nav-link scrollto" href="#menu">Regime</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Calcul IMC</a></li>
           <li><a class="nav-link scrollto" href="#specials">Sport</a></li>
           <li><a class="nav-link scrollto" href="<?php echo base_url('../Evolutionuser/index'); ?>">Entrer mon evolution</a></li>
         </ul>
@@ -130,15 +169,25 @@
 <section id="about" class="d-flex align-items-center bg-dark text-light">
 <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
     <div class="col-lg-8">
-      <h1>Votre IMC au debut:10.1</h1>
+        
+      <h1>Votre IMC au debut:18</h1>
       <h1>Votre Objectif :12.1</h1>
-      <h1>Votre IMC actuelle :12.1</h1>
 
       <div class="btns">
         <a href="<?php echo base_url('../Statistique/stat'); ?>" class="btn-book animated fadeInUp scrollto">Voir votre Evolution</a>
       </div>
     </div>
   </div>
+</section>
+<section id="menu" class="d-flex align-items-center bg-dark text-light">
+<div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="col-lg-8">
+     <p>Entrer votre Taille : <input type="number" name="taille"></p>   
+     <p>Enter votre poids : <input type="number" name="poids"></p>
+     <button type="submit" onclick="calculerIMC()">Calculer</button>
+    </div>
+  </div>
+
 </section>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -153,3 +202,22 @@
     </div>
 </body>
 </html>
+<script>
+    function calculerIMC() {
+  var taille = document.getElementById("taille").value;
+  var poids = document.getElementById("poids").value;
+
+  // Vérifier si les valeurs sont valides
+  if (taille <= 0 || poids <= 0) {
+    console.log("Veuillez entrer des valeurs valides pour la taille et le poids.");
+    return;
+  }
+
+  // Calculer l'IMC
+  var tailleEnMetres = taille / 100; // Convertir la taille en mètres
+  var imc = poids / (tailleEnMetres * tailleEnMetres);
+
+  alert("Votre IMC est : " + imc.toFixed(2));
+}
+
+</script>

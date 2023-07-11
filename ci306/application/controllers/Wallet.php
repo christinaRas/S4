@@ -9,6 +9,7 @@ class Wallet extends MY_Controller
         $this->load->model("WalletModel");
         $data = array();
        $data['result'] = $this->WalletModel->getWalletUser($id);
+
         $this->vue('Wallet',$data);
     }
     public function error()
@@ -18,12 +19,14 @@ class Wallet extends MY_Controller
     public function codeValid()
     {
         $id = $this->session->userdata('id_user');
+    
         $this->load->model("WalletModel");
-        $data = array();
         $data['result'] = $this->WalletModel->getcode();
-        $this->vue("ListeCredit",$data);
+    
+    
+        $this->vue("ListeCredit", $data);
     }
-    public function insertCode()
+        public function insertCode()
     {
         $data = array(
             'id_paiement' => null,
@@ -38,12 +41,9 @@ class Wallet extends MY_Controller
             $this->error();
         }
     }
-    public function deductionDuree()
-    {
-        $this->load->model("WalletModel");
-        $duree = $this->input->post("duree");
-        $session = $this->session->userdata('id_user');
-        $this->WalletModel->deductionPrixDuree($session,$duree);
-        $this->index();
-    }
+public function getImc()
+{
+
+    $this->codeValid();
+}
 }

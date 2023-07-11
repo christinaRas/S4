@@ -6,11 +6,11 @@ class MY_Controller extends CI_Controller {
     {
        parent ::__construct(); 
     }
-	public function vue($view,$data=array())
+	public function vue($view,$data=array(),$data2=array())
     {
         $this->load->helper('url');
         $this->load->view('layout/header');
-        $this->load->view($view,$data);
+        $this->load->view($view,$data,$data2);
         $this->load->view('layout/footer');     
     }
 
