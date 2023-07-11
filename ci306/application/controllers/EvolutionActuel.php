@@ -15,10 +15,14 @@ class EvolutionActuel extends MY_Controller
 
 public function getEvolution($userId)
 {
-    $this->db->select('date, poids');
-    $this->db->where('id_user', $userId);
-    $query = $this->db->get('Evolution');
+    $sql = "select*from evolution where id_user =$userID";
+    $query = $this->db->query($sql);
     return $query->result();
+
+    // $this->db->select('date, poids');
+    // $this->db->where('id_user', $userId);
+    // $query = $this->db->get('Evolution');
+    // return $query->result();
 }
 
     
