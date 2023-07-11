@@ -93,7 +93,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">Diet</a></h1>
+      <h1 class="logo me-auto me-lg-0"><a href="index.html"><?php echo $_SESSION['id_user']; ?></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -125,9 +125,7 @@
             <a href="<?php echo base_url('../Wallet/CodeValid'); ?>" class="btn-book animated fadeInUp scrollto">Entrer un Code de Credits</a>
           </div>
         </div>
-        <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-          <a href="https://www.youtube.com/watch?v=u6BOC7CDUTQ" class="glightbox play-btn"></a>
-        </div>
+        
     </div>
   </section><!-- End Hero --> 
 

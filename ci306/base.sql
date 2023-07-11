@@ -173,9 +173,11 @@ insert into paiement (id_paiement, id_user, id_argent, etat) values (null, 2, 1,
 
 -- 1 NON VALIDER
 -- 2 VALIDER
-create or replace view porte_feuille as select paiement.id_user as total, sum(code_argent.valeur) as total
+create or replace view porte_feuille as 
+select paiement.id_user, sum(code_argent.valeur) as total
 from paiement
 join code_argent on paiement.id_argent = code_argent.id_argent
+where paiement.etat = 2
 group by paiement.id_user;
 
 

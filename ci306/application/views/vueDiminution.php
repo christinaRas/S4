@@ -6,14 +6,12 @@
     <link href="<?php echo base_url('assets/img/favicon.png'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/img/apple-touch-icon.png'); ?>" rel="stylesheet">
   <link href="<?php echo base_url('assets/css/style.css'); ?>" rel="stylesheet">
-
     <!-- css pour step progress -->
     <style>
       #progress {
         position: relative;
         margin-bottom: 30px;   
       }
-
       #progress-bar {
         position: absolute;
         background: lightseagreen;
@@ -22,8 +20,6 @@
         top: 50%;
         left: 0;
       }
-
-
       #progress-num {
         margin: 0;
         padding: 0;
@@ -42,7 +38,6 @@
         width: 100%;
         z-index: -1;
       }
-
       #progress-num .step {
         border: 3px solid lightgray;
         border-radius: 100%;
@@ -87,9 +82,6 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="<?php echo base_url('assets/img/favicon.png'); ?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/img/apple-touch-icon.png'); ?>" rel="stylesheet">
-  <link href="<?php echo base_url('assets/css/style1.css'); ?>" rel="stylesheet">
 
 
   <!-- =======================================================
