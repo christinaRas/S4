@@ -24,7 +24,7 @@
     <li class="nav-item">
         <a class="nav-link " href="index.html">
         <i class="bi bi-grid"></i>
-        <span>Code Validation</span>
+        <span>Votre Evolution</span>
         </a>
     </li><!-- End Dashboard Nav -->
 
