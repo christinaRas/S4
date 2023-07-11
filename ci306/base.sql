@@ -5,7 +5,6 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
 use regime;
---Front Office =================
 CREATE TABLE user (
     id_user INT PRIMARY KEY AUTO_INCREMENT,
     nom_user VARCHAR(100),
@@ -52,7 +51,7 @@ create table ChoixObjectif(
     id_choix int not null,
     FOREIGN KEY (id_user) REFERENCES User(id_user),
     FOREIGN KEY (idDescription) REFERENCES Description(idDescription),
-    FOREIGN key (id_choix) references choix(id_choix)
+    FOREIGN key (id_choix) references choixre(id_choix)
 );
 
 create table regimeMampitomboplat(
@@ -122,22 +121,6 @@ insert into regimeMampitombo values(8,'','images/mampihena/15.jpg');
 insert into regimeMampitombo values(9,'','images/mampihena/16.jpg');
 insert into regimeMampitombo values(10'','images/mampihena/17.jpg');
 
--- create table ActiviteSport(
---     idAS int primary key auto_increment not null,
---     typeSport varchar(100)
--- )engine=innodb;
-
--- insert into ActiviteSport values(1, 'Pompe 30');
--- insert into ActiviteSport values(1, 'Pompe 50');
--- insert into ActiviteSport values(1, 'Abdominos 30');
--- insert into ActiviteSport values(1, 'Abdominos 50');
--- insert into ActiviteSport values(1, 'Squat 30');
--- insert into ActiviteSport values(1, 'Squat 50');
--- insert into ActiviteSport values(1, 'Squat 100');
--- insert into ActiviteSport values(1, '2 km de footing');
--- insert into ActiviteSport values(1, 'jogging 1h 30');
-
---Back Office ==================================
 
 create table Evolution(
     idE int primary key auto_increment not null,
