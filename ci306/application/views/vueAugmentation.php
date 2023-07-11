@@ -138,109 +138,120 @@
 
   <main id="main">
 
-        <!-- debut step progress -->
+<!-- debut step progress -->
+<h3>Voici les suivis des Jours de votre progression</h3>
+<div id="progress">
+    <div id="progress-bar"></div>
+    <ul id="progress-num">
+        <li class="step active">1</li>
+        <li class="step">2</li>
+        <li class="step">3</li>
+        <li class="step">4</li>
+    </ul>
+</div>
 
-  <h3>Voici les suivis des Jours de votre progression</h3>
-            <div id="progress">
-                <div id="progress-bar"></div>
-                <ul id="progress-num">
-                    <li class="step active">1</li>
-                    <li class="step">2</li>
-                    <li class="step">3</li>
-                    <li class="step">4</li>
-                </ul>
-            </div>
+<button id="progress-prev" class="btn" disabled>Prev</button>
+<button id="progress-next" class="btn">Next</button>
 
-            <button id="progress-prev" class="btn" disabled>Prev</button>
-            <button id="progress-next" class="btn">Next</button>
+      <script>
+          const progressNext = document.getElementById("progress-next");
+          const progressPrev = document.getElementById("progress-prev");
+          const steps = document.querySelectorAll(".step");
+          const progressBar = document.getElementById("progress-bar");
+          const menuItems = document.querySelectorAll(".menu-item");
 
-            <script>
-                const progressNext = document.getElementById("progress-next");
-                const progressPrev = document.getElementById("progress-prev");
-                const steps = document.querySelectorAll(".step");
-                const progressBar = document.getElementById("progress-bar");
+          let active = 1;
 
-                let active = 1;
+          progressNext.addEventListener("click", () => {
+              active++;
+              if (active > steps.length) {
+                  active = steps.length;
+              }
+              updateProgress();
+              updateMenuItems();
+          });
 
-                progressNext.addEventListener("click", () => {
-                    active++;
-                    if (active > steps.length) {
-                        active = steps.length;
-                    }
-                    updateProgress();
-                });
+          progressPrev.addEventListener("click", () => {
+              active--;
+              if (active < 1) {
+                  active = 1;
+              }
+              updateProgress();
+              updateMenuItems();
+          });
 
-                progressPrev.addEventListener("click", () => {
-                    active--;
-                    if (active < 1) {
-                        active = 1;
-                    }
-                    updateProgress();
-                });
+          const updateProgress = () => {
+              steps.forEach((step, i) => {
+                  if (i < active) {
+                      step.classList.add("active");
+                  } else {
+                      step.classList.remove("active");
+                  }
+              });
+              progressBar.style.width = ((active - 1) / (steps.length - 1)) * 100 + "%";
 
-                const updateProgress = () => {
-                    steps.forEach((step, i) => {
-                        if (i < active) {
-                            step.classList.add("active");
-                        } else {
-                            step.classList.remove("active");
-                        }
-                    });
-                    progressBar.style.width = ((active - 1) / (steps.length - 1)) * 100 + "%";
+              if (active === 1) {
+                  progressPrev.disabled = true;
+              } else if (active === steps.length) {
+                  progressNext.disabled = true;
+              } else {
+                  progressPrev.disabled = false;
+                  progressNext.disabled = false;
+              }
+          };
 
-                    if (active === 1) {
-                        progressPrev.disabled = true;
-                    } else if (active === steps.length) {
-                        progressNext.disabled = true;
-                    } else {
-                        progressPrev.disabled = false;
-                        progressNext.disabled = false;
-                    }
-                };
+          const updateMenuItems = () => {
+              menuItems.forEach((item, i) => {
+                  if (i < active - 1) {
+                      item.classList.add("d-none");
+                  } else {
+                      item.classList.remove("d-none");
+                  }
+              });
+          };
 
-                updateProgress();
-            </script>
+          updateProgress();
+          updateMenuItems();
+      </script>
+<!-- fin step progress -->
 
-            <!-- // step progress -->
-
-        <!-- fin step progress -->
-  
 <!-- End About Section -->
 
-    <section id="menu" class="menu section-bg">
-      <div class="container" data-aos="fade-up">
+<section id="menu" class="menu section-bg">
+    <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Menu</h2>
-          <p>Check Our Tasty Menu</p>
+            <h2>Menu</h2>
+            <p>Check Our Tasty Menu</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="menu-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-starters">Starters</li>
-              <li data-filter=".filter-salads">Salads</li>
-              <li data-filter=".filter-specialty">Specialty</li>
-            </ul>
-          </div>
+            <div class="col-lg-12 d-flex justify-content-center">
+                <ul id="menu-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-starters">Starters</li>
+                    <li data-filter=".filter-salads">Salads</li>
+                    <li data-filter=".filter-specialty">Specialty</li>
+                </ul>
+            </div>
         </div>
 
         <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
-        <?php foreach ($plat as $p): ?>
-          <div class="col-lg-6 menu-item filter-starters">
-          <img src="<?php echo base_url($p->photoMampitomboplat); ?>" class="menu-img" alt="">
-            <div class="menu-content">
-              <a href="#"><?php echo $p->nomMampitomboplat; ?></a><span>5000 AR</span>
-            </div>
-            <div class="menu-ingredients">
-              Lorem, deren, trataro, filede, nerada
-            </div>
-          </div>
-          <?php endforeach; ?>
+            <?php foreach ($plat as $index => $p): ?>
+                <div class="col-lg-6 menu-item filter-starters <?php echo 'menu-item-step'.($index + 1); ?>">
+                    <img src="<?php echo base_url($p->photoMampitomboplat); ?>" class="menu-img" alt="">
+                    <div class="menu-content">
+                        <a href="#"><?php echo $p->nomMampitomboplat; ?></a><span>5000 AR</span>
+                    </div>
+                    <div class="menu-ingredients">
+                        Lorem, deren, trataro, filede, nerada
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- ======= Book A Table Section ======= --
 
