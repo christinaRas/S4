@@ -6,7 +6,7 @@ class Modelinsert_paiement extends CI_Model {
         //$idEtat = 1;
         public function InsertPaiement($id_argent)
         {
-            $sql="insert into Paiement(ID_PAIEMENT,ID_USER,ID_ARGENT) values(null, $id_argent, 2)";
+            $sql="insert into Paiement(ID_PAIEMENT,ID_USER,ID_ARGENT) values(null, $id_argent, 1)";
             $query=$this->db->query($sql);
         }
 }
