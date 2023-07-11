@@ -29,6 +29,8 @@ class Landing extends MY_Controller
             exit();
         } elseif ($choix == 2) {
             header("Location: " . $base_url . '../Diminution/plat');
+        }else {
+            header("Location: " . $base_url . '../Diminution/plat'); 
         }
     }  
     public function profil()
