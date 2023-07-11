@@ -130,6 +130,10 @@ create table Evolution(
     FOREIGN key (id_user) REFERENCES user(id_user)
 );
 
+insert into Evolution(id_user, poids, date) values ( 2, 80, '2023-07-11');
+insert into Evolution(id_user, poids, date) values ( 2, 82, '2023-07-21');
+
+
 
 create view v_nombreclient as select count(*) as nb from user;
 

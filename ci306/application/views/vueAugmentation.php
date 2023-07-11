@@ -231,7 +231,7 @@
           <div class="col-lg-6 menu-item filter-starters">
           <img src="<?php echo base_url($p->photoMampitomboplat); ?>" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#"><?php echo $p->nomMampitomboplat; ?></a><span>$5.95</span>
+              <a href="#"><?php echo $p->nomMampitomboplat; ?></a><span>5000 AR</span>
             </div>
             <div class="menu-ingredients">
               Lorem, deren, trataro, filede, nerada
