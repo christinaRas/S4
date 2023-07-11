@@ -11,4 +11,12 @@ class Wallet extends MY_Controller
        $data['result'] = $this->WalletModel->getWalletUser($id);
         $this->vue('Wallet',$data);
     }
+    public function codeValid()
+    {
+        $id = $this->session->userdata('id_user');
+        $this->load->model("WalletModel");
+        $data = array();
+        $data['result'] = $this->WalletModel->getcode();
+
+    }
 }
