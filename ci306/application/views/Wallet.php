@@ -123,7 +123,9 @@
         <a href="<?php echo base_url('../Wallet/CodeValid'); ?>" class="btn-book animated fadeInUp scrollto">Entrer un Code de Crédits</a>
       </div>
     </div>
-  </div>
+    <br>
+    <br>
+        
 </section><!-- End Hero -->
 <section id="about" class="d-flex align-items-center bg-dark text-light">
 <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">

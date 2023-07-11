@@ -38,4 +38,12 @@ class Wallet extends MY_Controller
             $this->error();
         }
     }
+    public function deductionDuree()
+    {
+        $this->load->model("WalletModel");
+        $duree = $this->input->post("duree");
+        $session = $this->session->userdata('id_user');
+        $this->WalletModel->deductionPrixDuree($session,$duree);
+        $this->index();
+    }
 }
