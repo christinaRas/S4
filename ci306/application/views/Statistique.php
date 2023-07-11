@@ -83,3 +83,35 @@
   </main><!-- End #main -->
 </body>
 </html>
+
+<!-- test vraie -->
+<!-- <script>
+    // Données du graphique
+    var data = {
+      labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin'],
+      datasets: [{
+        label: 'Evolution',
+        data: [60, 70, 80, 82, 79, 75], //affichage des intersections x,y
+        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+      }]
+    };
+
+    // Configuration du graphique
+    var options = {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    };
+
+    // Création du graphique
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  </script> -->
