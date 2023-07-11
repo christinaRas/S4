@@ -3,24 +3,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Statistique extends MY_Controller 
 {
     public function stat()
-    {
+{
+    $this->load->library('session');
 
-        $data['Evolution'] = $this->getEvolution();
+    $userId = $this->session->userdata('id_user');
 
-        // $this->load->vue('Statistique');
-        // $data = array();
-        // $data['plat'] = $this->Model_augmentation->getPlat();
-        $this->vue('Statistique',$data);
+    $data['Evolution'] = $this->getEvolution($userId);
 
-    }
-        
-        public function getEvolution()
-    {   
-        // $sql = "select date,poids from Evolution "
-        // $query = $this->db->query($sql);
-        $this->db->select('date, poids');
-        $query = $this->db->get('Evolution');
-        return $query->result();
-    }
+    $this->vue('Statistique', $data);
+}
+
+public function getEvolution($userId)
+{
+    $this->db->select('date, poids');
+    $this->db->where('id_user', $userId);
+    $query = $this->db->get('Evolution');
+    return $query->result();
+}
+
     
 }
