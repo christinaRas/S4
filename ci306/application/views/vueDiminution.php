@@ -128,7 +128,8 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
           <li><a class="nav-link scrollto" href="#specials">Sport</a></li>
-          <li><a class="nav-link scrollto" href="<?php echo base_url('../Evolutionuser/index'); ?>">Entrer mon evolution</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo base_url('../Statistique/stat'); ?>">Statistique d'evolution</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo base_url('../Evolutionuser/index'); ?>">Enter evolution</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -247,7 +248,7 @@
           <div class="col-lg-6 menu-item filter-starters">
           <img src="<?php echo base_url($p->photoMampihenaplat); ?>" class="menu-img" alt="">
             <div class="menu-content">
-              <a href="#"><?php echo $p->nomMampihenaplat; ?></a><span>5000 AR</span>
+              <a href="#"><?php echo $p->nomMampihenaplat; ?></a><span>3000 AR</span>
             </div>
             <div class="menu-ingredients">
               Lorem, deren, trataro, filede, nerada

@@ -110,7 +110,8 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
           <li><a class="nav-link scrollto" href="#specials">Sport</a></li>
-          <li><a class="nav-link scrollto" href="<?php echo base_url('../Evolutionuser/index'); ?>">Entrer mon evolution</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo base_url('../Statistique/stat'); ?>">Statistique d'evolution</a></li>
+          <li><a class="nav-link scrollto" href="<?php echo base_url('../Evolutionuser/index'); ?>">Enter evolution</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
