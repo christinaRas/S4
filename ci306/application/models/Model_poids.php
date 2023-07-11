@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Model_statistique extends CI_Model {
+class Model_poids extends CI_Model {
 
    public function getImc($userId)
    {
@@ -13,7 +13,7 @@ class Model_statistique extends CI_Model {
 
         $query = $this->db->get();
         $poids = $this->db->poids;
-        $taille=  $this->db->taile/10;
+        $taille=  $this->db->taille/10;
         return  $taille / ($poids*$poids);
    }
 }
