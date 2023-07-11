@@ -22,3 +22,4 @@ class Model_evolution extends CI_Model {
         return $query->result();
     }
 }
+?>
