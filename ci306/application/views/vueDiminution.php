@@ -259,6 +259,41 @@
       </div>
     </section>
 
+    <section id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Sport</h2>
+          <p>Check the sports</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-starters">Starters</li>
+              <li data-filter=".filter-salads">Salads</li>
+              <li data-filter=".filter-specialty">Specialty</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+        <?php foreach ($sport as $p): ?>
+          <div class="col-lg-6 menu-item filter-starters">
+          <img src="<?php echo base_url($p->photoMampihenasport); ?>" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#"><?php echo $p->nomMampihenasport; ?></a><span></span>
+            </div>
+            <div class="menu-ingredients">
+              Lorem, deren, trataro, filede, nerada
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+
     <!-- ======= Book A Table Section ======= --
 
 
