@@ -20,4 +20,14 @@ class WalletModel extends CI_Model {
         $result = $query->result();
         return $result; 
     }
+    public function prixParDuree($semaine,$session)
+    {
+        $prix = 10000;
+        $remiseGold = 15;
+            if ($session==2) {
+                // remise 15%
+                $prix = $prix*$remiseGold/100;
+            }
+            return $prix;
+    }
 }

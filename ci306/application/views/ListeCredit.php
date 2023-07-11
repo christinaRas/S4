@@ -1,4 +1,4 @@
-<form class="bg-dark text-light p-4" method="post" action="<?php echo base_url('..'); ?>">
+<form class="bg-dark text-light p-4" method="post" action="<?php echo base_url('../Wallet/insertCode'); ?>">
   <h2 class="text-light mb-4">Choisir crédit</h2>
   <div class="form-group">
     <label for="selectOption" class="form-label">Option :</label>
