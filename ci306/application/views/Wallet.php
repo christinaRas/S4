@@ -144,5 +144,12 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+      <div class="footer" style ="margin-left: 0%; margin-top: 25%;">
+    <footer style="background-color: black; color: white; padding: 20px; width: 100%; text-align: center; mar">
+            <div class ="titre" style ="text-align: center;">
+            <p >&copy; 2023  ETU : 2204-2207-2207.</p>
+            </div>
+    </footer>
+    </div>
 </body>
 </html>
