@@ -113,21 +113,20 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-        <div class="col-lg-8">
-          <h1>Votre Solde est de</h1>
-          <?php foreach ($result as $results) { ?>
-          <h2><span><?php echo $results->total; ?>  Ar</span></h2>
-        <?php  } ?>
+  <section id="hero" class="d-flex align-items-center bg-dark text-light">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="col-lg-8">
+      <h1>Votre Solde est de</h1>
+      <?php foreach ($result as $results) { ?>
+        <h2><span><?php echo $results->total; ?> Ar</span></h2>
+      <?php } ?>
 
-          <div class="btns">
-            <a href="<?php echo base_url('../Wallet/CodeValid'); ?>" class="btn-book animated fadeInUp scrollto">Entrer un Code de Credits</a>
-          </div>
-        </div>
-        
+      <div class="btns">
+        <a href="<?php echo base_url('../Wallet/CodeValid'); ?>" class="btn-book animated fadeInUp scrollto">Entrer un Code de Crédits</a>
+      </div>
     </div>
-  </section><!-- End Hero --> 
+  </div>
+</section><!-- End Hero -->
 
   <main id="main">
   </main>
