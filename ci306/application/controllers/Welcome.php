@@ -35,7 +35,14 @@ class Welcome extends MY_Controller {
 				$this->vue('diet', $data);
 
 			} else {
-				$this->vue('evolution');
+				$this->load->model('Model_evolution');
+				$choix = $this->Model_evolution->returne($id);
+				if ($choix == 1) {
+					header("Location: " . $base_url . '../Augmentation/plat');
+					exit();
+				} elseif ($choix == 2) {
+					header("Location: " . $base_url . '../Diminution/plat');
+				}
 			}
 		}else {
 			$this->error();
