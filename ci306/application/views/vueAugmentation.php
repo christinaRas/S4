@@ -121,7 +121,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
+  <section id="hero" class="d-flex align-items-center" style ="background: url(<?php echo base_url('../images/1.jpg'); ?>) top center;">
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
         <div class="col-lg-8">
           <h1>Welcome to <span>Diet</span></h1>
