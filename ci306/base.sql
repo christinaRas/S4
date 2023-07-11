@@ -147,6 +147,10 @@ create table Evolution(
     FOREIGN key (id_user) REFERENCES user(id_user)
 );
 
+insert into Evolution(id_user, poids, date) values ( 2, 80, '2023-07-11');
+insert into Evolution(id_user, poids, date) values ( 2, 82, '2023-07-21');
+
+
 
 CREATE VIEW V_NOMBRECLIENT AS SELECT COUNT(*) as nb FROM user;
 CREATE TABLE  CODE_ARGENT
