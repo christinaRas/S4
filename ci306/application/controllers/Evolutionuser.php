@@ -16,14 +16,13 @@ class Evolutionuser extends MY_Controller
         $date = $this->input->post("date");
 
         $this->load->model('Model_evolution');
-        if($this->Model_evolution->saveEvolution($id_user,$newpoids,$date))
+        if($this->Model_evolution->saveEvolution($id_user, $newpoids, $date))
         {
-            $choix=$this->Model_evolution-> returne($id_user);
+            $choix = $this->Model_evolution->returne($id_user);
             if ($choix == 1) {
-                header("Location: " . $base_url . '../Augmentation/plat');
-                exit();
+                redirect('../Statistique/stat'); // Redirection vers le contrôleur "Augmentation" et la méthode "plat"
             } elseif ($choix == 2) {
-                header("Location: " . $base_url . '../Diminution/plat');
+                redirect('../Diminution/plat'); // Redirection vers le contrôleur "Diminution" et la méthode "plat"
             }
         }
     }
