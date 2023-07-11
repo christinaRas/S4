@@ -77,16 +77,10 @@ create table regimeMampitombosport(
 );
 
 
-insert into regimeMampitombo values(1,'','public/images/mampitombo/1.jpg');
-insert into regimeMampitombo values(2,'','public/images/mampitombo/2.jpg');
-insert into regimeMampitombo values(3,'','public/images/mampitombo/3.jpg');
-insert into regimeMampitombo values(4,'','public/images/mampitombo/4.jpg');
-insert into regimeMampitombo values(5,'','public/images/mampitombo/5.jpg');
-insert into regimeMampitombo values(6,'','public/images/mampitombo/6.jpg');
-insert into regimeMampitombo values(7,'','public/images/mampitombo/7.jpg');
-insert into regimeMampitombo values(8,'','public/images/mampitombo/31.jpg');
-insert into regimeMampitombo values(9,'','public/images/mampitombo/32.jpg');
-insert into regimeMampitombo values(10'','public/images/mampitombo/33.jpg');
+insert into regimeMampitombosport values(null,'Muscle des pieds',60,'images/sportMampitombo/1.jpg');
+insert into regimeMampitombosport values(null,'Muscle des bras',60,'images/sportMampitombo/2.jpg');
+insert into regimeMampitombosport values(null,'Muscle fessier',60,'images/sportMampitombo/3.jpg');
+insert into regimeMampitombosport values(null,'Poitrine',60,'images/sportMampitombo/4.jpg');
 
 
 create table regimeMampihenaplat(
@@ -110,17 +104,11 @@ create table regimeMampihenasport(
     photoMampihenasport varchar(100)
 );
 
-
-insert into regimeMampitombo values(1,'','images/mampihena/8.jpg');
-insert into regimeMampitombo values(2,'','images/mampihena/9.jpg');
-insert into regimeMampitombo values(3,'','images/mampihena/10.jpg');
-insert into regimeMampitombo values(4,'','images/mampihena/11.jpg');
-insert into regimeMampitombo values(5,'','images/mampihena/12.jpg');
-insert into regimeMampitombo values(6,'','images/mampihena/13.jpg');
-insert into regimeMampitombo values(7,'','images/mampihena/14.jpg');
-insert into regimeMampitombo values(8,'','images/mampihena/15.jpg');
-insert into regimeMampitombo values(9,'','images/mampihena/16.jpg');
-insert into regimeMampitombo values(10'','images/mampihena/17.jpg');
+insert into regimeMampihenasport values(null,'Abdos',10,'images/sportMampihena/1.jpg');
+insert into regimeMampihenasport values(null,'Squat',10,'images/sportMampihena/2.jpg');
+insert into regimeMampihenasport values(null,'Jump',20,'images/sportMampihena/3.jpg');
+insert into regimeMampihenasport values(null,'Velo',60,'images/sportMampihena/4.jpg');
+insert into regimeMampihenasport values(null,'Pompe',10,'images/sportMampihena/4.jpg');
 
 
 create table Evolution(
