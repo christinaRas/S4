@@ -5,8 +5,8 @@ class Model_BackOffice extends CI_Model {
     public function getNonValid()
 {
     $this->db->select('*');
-    $this->db->from('PAIEMENT');
-    $this->db->where('ETAT', 1);
+    $this->db->from('paiement');
+    $this->db->where('etat', 1);
     $query = $this->db->get();
     $result = $query->result();
 
@@ -15,9 +15,9 @@ class Model_BackOffice extends CI_Model {
 
     public function validationCode($id)
     {
-        $this->db->where('ID_PAIEMENT',$id);
-        $this->db->set('ETAT',2);
-        $this->db->update('PAIEMENT');
+        $this->db->where('id_paiement',$id);
+        $this->db->set('etat',2);
+        $this->db->update('paiement');
     }
     public function countClient()
     {
@@ -30,7 +30,7 @@ class Model_BackOffice extends CI_Model {
     public function listeClient()
     {
         $this->db->select("*");
-        $this->db->from("USER");
+        $this->db->from("user");
         $query = $this->db->get();
         $result = $query->result();
         return $result; 
