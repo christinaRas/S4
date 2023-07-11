@@ -127,7 +127,7 @@
           <h2><span>10,000Ar</span></h2>
 
           <div class="btns">
-            <a href="<?php echo base_url('../Wallet'); ?>" class="btn-book animated fadeInUp scrollto">Entre un Code de Credits</a>
+            <a href="<?php echo base_url('../Wallet/CodeValid'); ?>" class="btn-book animated fadeInUp scrollto">Entrer un Code de Credits</a>
           </div>
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">

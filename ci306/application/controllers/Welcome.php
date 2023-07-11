@@ -7,6 +7,10 @@ class Welcome extends MY_Controller {
 	{
 		$this->vue('login');
 	}
+    public function error()
+    {
+        $this->vue("error");
+    }
 
 	public function log()
 	{
@@ -33,6 +37,8 @@ class Welcome extends MY_Controller {
 			} else {
 				$this->vue('evolution');
 			}
+		}else {
+			$this->error();
 		}
 	}
 

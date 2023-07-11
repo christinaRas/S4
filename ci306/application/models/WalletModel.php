@@ -12,4 +12,12 @@ class WalletModel extends CI_Model {
         $result = $query->result();
         return $result; 
     }
+    public function getCode()
+    {
+        $this->db->select("*");
+        $this->db->from("code_argent");
+        $query =  $this->db->get();
+        $result = $query->result();
+        return $result; 
+    }
 }
