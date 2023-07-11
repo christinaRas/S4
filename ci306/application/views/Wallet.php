@@ -118,7 +118,7 @@
         <div class="col-lg-8">
           <h1>Votre Solde est de</h1>
           <?php foreach ($result as $results) { ?>
-          <h2><span><?php $results->total ?>  Ar</span></h2>
+          <h2><span><?php echo $results->total; ?>  Ar</span></h2>
         <?php  } ?>
 
           <div class="btns">
