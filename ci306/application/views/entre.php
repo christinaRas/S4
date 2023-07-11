@@ -37,7 +37,6 @@
     </div>
   </div>
 
-<<<<<<< HEAD
   <!-- ======= Header ======= --
 =======
   <!-- ======= Header ======= -->
@@ -62,7 +61,6 @@
       <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Wallet</a>
     </div>
   </header><!-- End Header -->
->>>>>>> 8b751f70e9f25e7c8b1205adbca3bb5750a9fb96
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">

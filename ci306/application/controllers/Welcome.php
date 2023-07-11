@@ -34,7 +34,7 @@ class Welcome extends MY_Controller {
 				$this->vue('evolution');
 			}
 		} else {
-			echo "non";
+			$this->index();
 		}
 	}
 
