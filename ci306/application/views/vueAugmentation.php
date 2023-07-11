@@ -136,9 +136,11 @@
     </div>
   </section><!-- End Hero --> 
 
+  <main id="main">
 
         <!-- debut step progress -->
-        <h3>Voici les suivis des Jours de votre progression</h3>
+
+  <h3>Voici les suivis des Jours de votre progression</h3>
             <div id="progress">
                 <div id="progress-bar"></div>
                 <ul id="progress-num">
@@ -199,33 +201,11 @@
                 updateProgress();
             </script>
 
-        <!-- // step progress -->
+            <!-- // step progress -->
 
         <!-- fin step progress -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <!-- <section id="about" class="about"> -->
-      <!-- <div class="container" data-aos="fade-up"> -->
-
-        <!-- <div class="row"> -->
-          
-          <!-- <div id="progress-container">
-          <div id="progress"></div>
-          <div class="circle" id="circle-1"></div>
-          <div class="circle" id="circle-2"></div>
-          
-          </div>
-          <button id="prev">Previous</button>
-          <button id="next">Next</button> -->
-        <!-- fin step progress -->
-
-      <!-- </div> -->
-
-
-      
-    </section><!-- End About Section -->
+  
+<!-- End About Section -->
 
     <section id="menu" class="menu section-bg">
       <div class="container" data-aos="fade-up">
