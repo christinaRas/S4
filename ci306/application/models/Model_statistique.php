@@ -12,12 +12,4 @@ class Model_statistique extends CI_Model {
         $query=$this->db->query($sql);
         return $query->result();
     }
-
-    
-
-    public function Verification($id_user)
-    {
-        if()
-    }
-
 }
