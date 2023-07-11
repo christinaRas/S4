@@ -9,7 +9,6 @@ class Model_BackOffice extends CI_Model {
     $this->db->where('etat', 1);
     $query = $this->db->get();
     $result = $query->result();
-
     return $result;
 }
 
