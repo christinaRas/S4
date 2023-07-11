@@ -33,8 +33,6 @@ class Welcome extends MY_Controller {
 			} else {
 				$this->vue('evolution');
 			}
-		} else {
-			$this->index();
 		}
 	}
 

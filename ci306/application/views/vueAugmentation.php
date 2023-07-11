@@ -127,7 +127,7 @@
           <h2>L'endroit faite pour un corps sain et parfait</h2>
 
           <div class="btns">
-            <a href="<?php echo base_url('../Welcome/index'); ?>" class="btn-book animated fadeInUp scrollto">Wallet</a>
+            <a href="<?php echo base_url('../Wallet'); ?>" class="btn-book animated fadeInUp scrollto">Wallet</a>
           </div>
         </div>
         <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
