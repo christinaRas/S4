@@ -77,10 +77,10 @@ create table regimeMampitombosport(
 );
 
 
-insert into regimeMampihenasport values(null,'Muscle des pieds',60,'images/mampitombo/1.jpg');
-insert into regimeMampihenasport values(null,'Muscle des bras',60,'images/mampitombo/2.jpg');
-insert into regimeMampihenasport values(null,'Muscle fessier',60,'images/mampitombo/3.jpg');
-insert into regimeMampihenasport values(null,'Poitrine',60,'images/mampitombo/4.jpg');
+insert into regimeMampitombosport values(null,'Muscle des pieds',60,'images/sportMampitombo/1.jpg');
+insert into regimeMampitombosport values(null,'Muscle des bras',60,'images/sportMampitombo/2.jpg');
+insert into regimeMampitombosport values(null,'Muscle fessier',60,'images/sportMampitombo/3.jpg');
+insert into regimeMampitombosport values(null,'Poitrine',60,'images/sportMampitombo/4.jpg');
 
 
 create table regimeMampihenaplat(
@@ -104,11 +104,11 @@ create table regimeMampihenasport(
     photoMampihenasport varchar(100)
 );
 
-insert into regimeMampihenasport values(null,'Abdos',10,'images/mampitombo/1.jpg');
-insert into regimeMampihenasport values(null,'Squat',10,'images/mampitombo/2.jpg');
-insert into regimeMampihenasport values(null,'Jump',20,'images/mampitombo/3.jpg');
-insert into regimeMampihenasport values(null,'Velo',60,'images/mampitombo/4.jpg');
-insert into regimeMampihenasport values(null,'Pompe',10,'images/mampitombo/4.jpg');
+insert into regimeMampihenasport values(null,'Abdos',10,'images/sportMampihena/1.jpg');
+insert into regimeMampihenasport values(null,'Squat',10,'images/sportMampihena/2.jpg');
+insert into regimeMampihenasport values(null,'Jump',20,'images/sportMampihena/3.jpg');
+insert into regimeMampihenasport values(null,'Velo',60,'images/sportMampihena/4.jpg');
+insert into regimeMampihenasport values(null,'Pompe',10,'images/sportMampihena/4.jpg');
 
 
 create table Evolution(
