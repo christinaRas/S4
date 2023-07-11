@@ -74,13 +74,6 @@
   <link href="<?php echo base_url('assets/css/style1.css'); ?>" rel="stylesheet">
 
 
-  <!-- =======================================================
-  * Template Name: Restaurantly
-  * Updated: Jun 15 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -124,7 +117,9 @@
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
         <div class="col-lg-8">
           <h1>Votre Solde est de</h1>
-          <h2><span>10,000Ar</span></h2>
+          <?php foreach ($result as $results) { ?>
+          <h2><span><?php $results->total ?>  Ar</span></h2>
+        <?php  } ?>
 
           <div class="btns">
             <a href="<?php echo base_url('../Wallet/CodeValid'); ?>" class="btn-book animated fadeInUp scrollto">Entrer un Code de Credits</a>
